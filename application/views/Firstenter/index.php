@@ -2,11 +2,11 @@
 	<div class="jumbotron">
 	  <div class="container" align="center">
 
-	  	<img src="img/index-jumbotron.jpg" class="img-circle">	  	 
-
+        <!-- <img src="index-jumbotron.jpg" class="img-circle"> -->
+	  		  	 
 	    <h1>Magnet</h1>
-	    <p>上有慈石者，其下有铜金</p>
-	    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">
+	    <p class="specialQuery">上有慈石者，其下有铜金</p>
+	    <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal" id="loginButton">
           登录
         </button>
 	  </div>

@@ -55,7 +55,7 @@
         <!--
           Mark Otto -> 数据库
         -->
-          <p class="navbar-text ">欢迎 <a href="#" class="navbar-link ">$ Mark Otto</a></p>
+          <p class="navbar-text ">欢迎 <a href="#" class="navbar-link "> Mark Otto</a></p>
           <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal" id="sign-out">
             退出
           </button>

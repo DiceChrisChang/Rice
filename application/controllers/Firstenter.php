@@ -25,7 +25,8 @@ class Firstenter extends CI_Controller {
 		/*
 		考虑使用 $getClassName 替换 Fristenter
 		$getClassName = get_class($this);
-		echo "$getClassName";
+		echo $getClassName;
+		
 		*/
 
 		// head
@@ -41,4 +42,5 @@ class Firstenter extends CI_Controller {
 		// js
 		$this->load->view('Firstenter/login.js');
 	}
+
 }

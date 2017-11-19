@@ -5,12 +5,12 @@
   <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
-            <div class="modal-header">
+            <div class="modal-header bg-primary">
                 <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-                <h4 class="modal-title" id="myModalLabel">  Welcome  </h4>
+                <h4 class="modal-title " id="myModalLabel">  Welcome  </h4>
             </div>
             <div class="modal-body"> 
-               <form class="form-horizontal">
+               <form class="form-horizontal" method="post" action="login">
                 <div class="form-group">
                   <label for="inputEmail3" class="col-sm-2 control-label">账号</label>
                   <div class="col-sm-8">
