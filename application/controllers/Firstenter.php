@@ -28,11 +28,8 @@ class Firstenter extends CI_Controller {
 		echo "$getClassName";
 		*/
 
-		// css
-		$this->load->view('Firstenter/foot.css');
-		$this->load->view('Firstenter/index.css');
 		// head
-		$this->load->view('Firstenter/head');
+		$this->load->view('Firstenter/head.php');
 		// body
 		$this->load->view('Firstenter/navbar.php');
 		$this->load->view('Firstenter/index.php');

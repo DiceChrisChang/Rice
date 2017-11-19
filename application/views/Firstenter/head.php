@@ -13,6 +13,14 @@
 
 	<!-- 可选的 Bootstrap 主题文件（一般不用引入） -->
 	<link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
-	
+
+
+	<!-- 
+		自行引入的 CSS 文件
+		尚未成功引入
+	-->
+	<link rel="stylesheet" type="text/css" href="../css/foot.css" charset="utf-8" />
+	<link rel="stylesheet" href="../css/index.css" type="text/css" charset="utf-8" />
+
 </head>
 <body>
