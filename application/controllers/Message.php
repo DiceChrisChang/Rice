@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Firstenter extends CI_Controller {
+class Message extends CI_Controller {
 
 	/**
 	 * Index Page for this controller.
@@ -30,17 +30,17 @@ class Firstenter extends CI_Controller {
 		*/
 
 		// head
-		$this->load->view('Firstenter/head.php');
+		$this->load->view('Message/head.php');
 		// body
-		$this->load->view('Firstenter/navbar.php');
-		$this->load->view('Firstenter/index.php');
-		$this->load->view('Firstenter/foot.php');
+		$this->load->view('Message/navbar.php');
+		$this->load->view('Message/message.php');
+		$this->load->view('Message/foot.php');
 		// modal
-		$this->load->view('Firstenter/modal.php');
+		$this->load->view('Message/modal.php');
 		// tail
-		$this->load->view('Firstenter/jquery_tail.php');
+		$this->load->view('Message/jquery_tail.php');
 		// js
-		$this->load->view('Firstenter/login.js');
+		$this->load->view('Message/login.js');
 	}
 
 }

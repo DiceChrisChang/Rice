@@ -32,7 +32,7 @@ class Firstenter extends CI_Controller {
 			使用 $content 代表主页 body 文件
 			创建一个自己的类
 		*/ 
-		$content = index.php;
+		//$content = index.php;
 
 		// head
 		$this->load->view('Firstenter/head.php');
