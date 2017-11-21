@@ -33,6 +33,7 @@ class Message extends CI_Controller {
 		$this->load->view('Message/head.php');
 		// body
 		$this->load->view('Message/navbar.php');
+		$this->load->view('Message/path_navigation.php');
 		$this->load->view('Message/message.php');
 		$this->load->view('Message/foot.php');
 		// modal

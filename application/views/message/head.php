@@ -63,6 +63,14 @@
         .foot_p{
         	margin-top: 10px;
         }
+        .breadcrumb{
+            position:relative;
+            bottom:-55px; 
+        }
+        #navbar-example{
+            height: 400px;
+            width: 600px; 
+        }
     </style>
 </head>
 <body>

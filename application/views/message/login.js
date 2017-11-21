@@ -38,5 +38,7 @@
       });
     }
 
-    
+    /*
+      缺 massage.php 的 js
+    */
   </script>

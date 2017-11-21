@@ -41,13 +41,14 @@
         #loginButton{
         	margin-top: 260px;
         }
-        .jumbotron{
+         .jumbotron{
         	background-image: url(img/indexBackground.jpg);
+        	/* img url 需设置通用路径 仅有登录页面使用 使用 js */
         	background-size: cover;
         	background-repeat:no-repeat;
         	background-color: #C0C0C0;
         	height: 720px;
-        }
+        } 
         #jContainer{
         	background-color: #C0C0C0;
         }
