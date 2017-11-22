@@ -10,17 +10,17 @@
                 <h4 class="modal-title" id="myModalLabel">  Welcome  </h4>
             </div>
             <div class="modal-body"> 
-               <form class="form-horizontal">
+               <form class="form-horizontal" action="application/controllers/login.php" method="post">
                 <div class="form-group">
                   <label for="inputEmail3" class="col-sm-2 control-label">账号</label>
                   <div class="col-sm-8">
-                    <input type="email" class="form-control" id="inputEmail3" placeholder="数字">
+                    <input type="email" class="form-control" id="inputEmail3" placeholder="数字" name="account">
                   </div>
                 </div>
                 <div class="form-group">
                   <label for="inputPassword3" class="col-sm-2 control-label">密码</label>
                   <div class="col-sm-8">
-                    <input type="password" class="form-control" id="inputPassword3" placeholder="字母数字组合">
+                    <input type="password" class="form-control" id="inputPassword3" placeholder="字母数字组合" name="password">
                   </div>
                 </div>
                 <div class="form-group">
@@ -36,7 +36,7 @@
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
-                <button type="submit" class="btn btn-primary">登录</button>
+                <button type="submit" class="btn btn-primary" >登录</button>
             </div>
         </div><!-- /.modal-content -->
     </div><!-- /.modal-dialog -->
