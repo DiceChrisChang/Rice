@@ -1,6 +1,6 @@
   <!-- 登录页面 body 主体 -->
 	<div class="jumbotron">
-	  <div class="container" align="center">
+	  <div class="container-fluid" align="center">
 
         <!-- <img src="index-jumbotron.jpg" class="img-circle"> -->
 	  		  	 

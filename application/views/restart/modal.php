@@ -10,7 +10,7 @@
                 <h4 class="modal-title" id="myModalLabel">  Welcome  </h4>
             </div>
             <div class="modal-body"> 
-               <form class="form-horizontal" action="application/controllers/login.php" method="post">
+               <form class="form-horizontal" action="rice/application/controllers/login.php" method="post">
                 <div class="form-group">
                   <label for="inputEmail3" class="col-sm-2 control-label">账号</label>
                   <div class="col-sm-8">
