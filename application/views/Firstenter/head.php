@@ -20,14 +20,6 @@
 	<link rel="stylesheet" type="text/css" href="application/views/Firstenter/firstenter.css">
 	<!-- 暂时添加的 css -->
 	<style type="text/css">
-        body { 
-        	padding-bottom: 20px; 
-            background-image: url(img/indexBackground.jpg);
-            /* img url 需设置通用路径 仅有登录页面使用 使用 js */
-            background-size: cover;
-            background-repeat:no-repeat;
-            /*height: 100%;*/
-        }
         .foot_p{
         	color:white;
         	text-align: center;
@@ -46,12 +38,20 @@
         #loginButton{
         	margin-top: 260px;
         }
-         .jumbotron{
-        	background-color: #C9DEFE;
-        	height: 200%;
+        .jumbotron{
+            padding-bottom: 20px; 
+            background-image: url(img/indexBackground.jpg);
+            /* img url 需设置通用路径 仅有登录页面使用 使用 js */
+            background-size: cover;
+            background-repeat:no-repeat;
+            overflow:hidden;
+            width: 1590px;
+            height: 100%;
+            overflow: hidden;
+            background-position:center;
         } 
         #jContainer{
-        	background-color: #C9DEFE;
+        	
         }
         .btn{
         	margin-right: 6px;
