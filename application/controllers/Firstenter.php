@@ -39,6 +39,8 @@ class Firstenter extends CI_Controller {
 		// body
 		$this->load->view('Firstenter/navbar.php');
 		$this->load->view('Firstenter/index.php');
+		$this->load->view('Firstenter/path_navigation.php');
+		$this->load->view('Firstenter/message.php');
 		$this->load->view('Firstenter/foot.php');
 		// modal
 		$this->load->view('Firstenter/modal.php');

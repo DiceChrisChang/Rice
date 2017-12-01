@@ -32,15 +32,16 @@
         	border-radius: 20%;
         	margin-top: 60px;
         }
-        h1{
-            margin-top: 80px;
+        .jumbotron h1{
+            margin-top: 170px;
         }
         .jumbotron p{
         	margin-top: 40px;
         	font-size: 25px;
         }
         #loginButton{
-        	margin-top: 260px;
+        	margin-top: 170px;
+            margin-bottom: 80px;
         }
         .jumbotron{
             padding-bottom: 20px; 
@@ -49,17 +50,18 @@
             background-size: cover;
             background-repeat:no-repeat;
             overflow:hidden;
-            width: 100%;
-            height: 100%;
+            width:100%;
+            min-height: 690px;
             overflow: hidden;
             margin-top:51px;
             background-size:100% auto;
+            margin-bottom: 0px;
            
         } 
-/*        .container-fluid{
+        .container-fluid{
             width:100%;
             height:100%;
-        }*/
+        }
         .btn{
         	margin-right: 6px;
         	position:relative;
@@ -71,6 +73,10 @@
         }
         .foot_p{
         	margin-top: 10px;
+        }
+        .img-rounded{
+            width: 400px;
+            height: 600px;
         }
     </style>
 </head>
