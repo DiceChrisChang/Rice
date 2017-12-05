@@ -1,7 +1,7 @@
 <div>
   <img src="img/pp.jpg" class="img-rounded">
 </div>
-<nav id="navbar-example" class="navbar navbar-default navbar-static" role="navigation">
+<nav id="navbar-notice" class="navbar navbar-default navbar-static" role="navigation">
   <div class="container-fluid"> 
     <div class="navbar-header">
       <button class="navbar-toggle" type="button" data-toggle="collapse" 
@@ -34,7 +34,7 @@
     </div>
   </div> 
 </nav>
-<div id="navbar-example" data-spy="scroll" data-target="#navbar-example" data-offset="0" 
+<div id="navbar-notice" data-spy="scroll" data-target="#navbar-example" data-offset="0" 
    style="height:200px;overflow:auto; position: relative;">
   <h4 id="ios">iOS</h4>
   <p>iOS 是一个由苹果公司开发和发布的手机操作系统。最初是于 2007 年首次发布 iPhone、iPod Touch 和 Apple 

@@ -78,5 +78,9 @@
             width: 400px;
             height: 600px;
         }
+        #navbar-notice{
+            width: 800px;
+            height: 600px;
+        }
     </style>
 </head>
