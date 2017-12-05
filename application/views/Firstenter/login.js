@@ -35,8 +35,9 @@
       $("#sign-out").click(function(){
         alert("您即将退出！即将切换登录");
         // 确定--需要转到首页(尚未登录)！
-      });
-    }
-    $('body').scrollspy({ target: '#navbar-notice' })
+        });
+      }
+      //滚动监听操作
+      //$('body').scrollspy({ target: '#navbar-notice' })
     
   </script>

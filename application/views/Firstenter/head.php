@@ -20,9 +20,13 @@
 	<link rel="stylesheet" type="text/css" href="application/views/Firstenter/firstenter.css">
 	<!-- 暂时添加的 css -->
 	<style type="text/css">
+        html{
+            width:100%;
+            overflow-x:hidden;
+        }
         body{
             width:100%;
-            height:100%;
+            height:auto;
             padding-bottom: 70px;
         }
         .foot_p{
@@ -89,19 +93,16 @@
         */
         .img-rounded{
             float: left;
-        }
-        .img-rounded{
             width: 450px;
             height: 600px;
         }
         #navbar-notice{
             width: 950px;
-            height: 600px;
+            height: auto;
             float: right;
             position: relative;
             left: 0px;
+            overflow: auto;
         }
-
-
     </style>
 </head>

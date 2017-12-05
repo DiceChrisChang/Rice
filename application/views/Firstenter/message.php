@@ -34,8 +34,8 @@
     </div>
   </div> 
 	</nav>
-	<div id="navbar-notice" data-spy="scroll" data-target="#navbar-example" data-offset="0" 
-   style="height:540px;overflow:auto; position: relative;top: -580px;color: white">
+<div id="navbar-notice" data-spy="scroll" data-target="#navbar-notice" data-offset="4" 
+   style="height:565px;overflow:auto; position: relative;color: black">
   <h4 id="ios">iOS</h4>
   <p>iOS 是一个由苹果公司开发和发布的手机操作系统。最初是于 2007 年首次发布 iPhone、iPod Touch 和 Apple 
     TV。iOS 派生自 OS X，它们共享 Darwin 基础。OS X 操作系统是用在苹果电脑上，iOS 是苹果的移动版本。
@@ -98,4 +98,4 @@
   </p>
   <p>Spring 框架最初是由 Rod Johnson 编写的，在 2003 年 6 月首次发布于 Apache 2.0 许可证下。
   </p>          
-	</div>
+</div>
