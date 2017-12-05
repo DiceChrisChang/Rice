@@ -94,7 +94,7 @@
         .img-rounded{
             float: left;
             width: 450px;
-            height: 600px;
+            height: 650px;
         }
         #navbar-notice{
             width: 950px;
@@ -103,6 +103,10 @@
             position: relative;
             left: 0px;
             overflow: auto;
+        }
+        .bg-primary,.bg-info,.bg-success,.bg-warning{
+            padding: 8px 3px 8px 3px;
+            margin-bottom: 4px;
         }
     </style>
 </head>
