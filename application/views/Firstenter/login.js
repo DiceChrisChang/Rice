@@ -37,6 +37,6 @@
         // 确定--需要转到首页(尚未登录)！
       });
     }
-
+    $('body').scrollspy({ target: '#navbar-notice' })
     
   </script>

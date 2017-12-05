@@ -23,6 +23,7 @@
         body{
             width:100%;
             height:100%;
+            padding-bottom: 70px;
         }
         .foot_p{
         	color:white;
@@ -40,7 +41,7 @@
         	font-size: 25px;
         }
         #loginButton{
-        	margin-top: 170px;
+        	margin-top: 130px;
             margin-bottom: 80px;
         }
         .jumbotron{
@@ -74,13 +75,33 @@
         .foot_p{
         	margin-top: 10px;
         }
+
+        /*
+        path-navigation
+        */
+        .breadcrumb{
+            margin-bottom: 0px;
+        }
+
+        
+        /*
+        notice css
+        */
         .img-rounded{
-            width: 400px;
+            float: left;
+        }
+        .img-rounded{
+            width: 450px;
             height: 600px;
         }
         #navbar-notice{
-            width: 800px;
+            width: 950px;
             height: 600px;
+            float: right;
+            position: relative;
+            left: 0px;
         }
+
+
     </style>
 </head>
