@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
-	<title><?php echo $title; ?></title>
+	<title><?php echo $title ?></title>
 	<!-- Bootstrap core CSS -->
     <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
     <!-- 最新版本的 Bootstrap 核心 CSS 文件 -->
@@ -25,9 +25,7 @@
             overflow-x:hidden;
         }
         body{
-            width:100%;
-            height:auto;
-            padding-bottom: 70px;
+            margin-bottom: 50px;
         }
         .foot_p{
         	color:white;
@@ -56,7 +54,7 @@
             background-repeat:no-repeat;
             overflow:hidden;
             width:100%;
-            min-height: 690px;
+            min-height: 692px;
             overflow: hidden;
             margin-top:51px;
             background-size:100% auto;
@@ -79,6 +77,9 @@
         .foot_p{
         	margin-top: 10px;
         }
+/*        .navbar-fixed-bottom{
+            margin-top: 70px;
+        }*/
 
         /*
         path-navigation
@@ -87,17 +88,17 @@
             margin-bottom: 0px;
         }
 
-        
+    
         /*
         notice css
         */
         .img-rounded{
             float: left;
-            width: 450px;
+            width: 480px;
             height: 650px;
         }
         #navbar-notice{
-            width: 950px;
+            width: 1100px;
             height: auto;
             float: right;
             position: relative;
@@ -106,7 +107,7 @@
         }
         .bg-primary,.bg-info,.bg-success,.bg-warning{
             padding: 8px 3px 8px 3px;
-            margin-bottom: 4px;
+            margin: 0px  5px 5px 4px;
         }
     </style>
 </head>

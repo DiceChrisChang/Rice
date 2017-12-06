@@ -24,7 +24,7 @@
   </div> 
 	</nav>
 <div id="navbar-notice" data-spy="scroll" data-target="#navbar-notice" data-offset="4" 
-   style="height:575px;overflow:auto; position: relative;top: -15px;color: black">
+   style="height:590px;overflow:auto; position: relative;top: -15px;color: black; margin-bottom:45px">
   <h4 id="ios">库存</h4>
   <p class="bg-primary">
   	产品：gx01z 库存已低至最小库存！

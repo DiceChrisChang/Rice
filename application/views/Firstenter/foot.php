@@ -2,6 +2,9 @@
 	    	navbar-default
 
 	    --> 
+	<div>
+	    <!--充当占位符的div块，无实质内容 -->
+		<div style="height:50px;"></div>
 		<nav class="navbar navbar-inverse navbar-fixed-bottom ">
   			<div class="container">
   				
@@ -9,3 +12,4 @@
     			
   			</div>
 		</nav>
+	</div>
