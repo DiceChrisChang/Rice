@@ -77,9 +77,14 @@
         .foot_p{
         	margin-top: 10px;
         }
-/*        .navbar-fixed-bottom{
-            margin-top: 70px;
-        }*/
+
+        /*
+        modal
+        */
+        .modal-header{
+            padding: 0px 0px 0px 0px;
+            margin: 0px  0px 0px 0px;
+        }
 
         /*
         path-navigation
@@ -94,7 +99,7 @@
         */
         .img-rounded{
             float: left;
-            width: 480px;
+            width: 470px;
             height: 650px;
         }
         #navbar-notice{
@@ -114,5 +119,6 @@
             margin :0px 0px 0px 0px;
             height: 2px;
         }
+
     </style>
 </head>

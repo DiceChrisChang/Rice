@@ -17,7 +17,7 @@
         <li class="col-md-3"><a href="#">仓储</a></li>
         <li class="col-md-3"><a href="#">订单</a></li>
         <li class="col-md-3"><a href="#">统计</a></li>
-        <li class="col-md-3"><a href="#">通知</a></li>
+        <li class="col-md-3" id="noticeClick"><a href="#">通知</a></li>
       </ul>
       <!--
       search  
