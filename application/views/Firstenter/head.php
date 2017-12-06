@@ -109,5 +109,10 @@
             padding: 8px 3px 8px 3px;
             margin: 0px  5px 5px 4px;
         }
+        #ios,#svn,#jmeter{
+            visibility:hidden;
+            margin :0px 0px 0px 0px;
+            height: 2px;
+        }
     </style>
 </head>

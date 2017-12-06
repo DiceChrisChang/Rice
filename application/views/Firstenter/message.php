@@ -12,7 +12,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="#">通知</a>
+      <a class="navbar-brand">通知</a>
     </div>
     <div class="collapse navbar-collapse bs-js-navbar-scrollspy">
       <ul class="nav navbar-nav">
@@ -24,7 +24,7 @@
   </div> 
 	</nav>
 <div id="navbar-notice" data-spy="scroll" data-target="#navbar-notice" data-offset="4" 
-   style="height:590px;overflow:auto; position: relative;top: -15px;color: black; margin-bottom:45px">
+   style="height:590px;overflow:auto; position: relative;top: -15px;color: black; margin-bottom:30px">
   <h4 id="ios">库存</h4>
   <p class="bg-primary">
   	产品：gx01z 库存已低至最小库存！
@@ -112,8 +112,65 @@
   <p class="bg-success">
   	完成付款提示： 订单号 Y0923mj439 已完成付款！
   </p>
+  <p class="bg-success">
+   完成付款提示： 订单号 Y0923mj439 已完成付款！
+  </p>
+   <p class="bg-success">
+   完成付款提示： 订单号 Y0923mj439 已完成付款！
+  </p>
+  <p class="bg-success">
+   完成付款提示： 订单号 Y0923mj439 已完成付款！
+  </p>
+  <p class="bg-success">
+   完成付款提示： 订单号 Y0923mj439 已完成付款！
+  </p>
+  <p class="bg-success">
+   完成付款提示： 订单号 Y0923mj439 已完成付款！
+  </p>
 
   <h4 id="jmeter">物流</h4>
+  <p class="bg-warning">
+  	物流已签收提示： 订单号 Y97439390 已进行物流签收！
+  </p>
+  <p class="bg-warning">
+  	物流已签收提示： 订单号 Y97439390 已进行物流签收！
+  </p>
+  <p class="bg-warning">
+  	物流已签收提示： 订单号 Y97439390 已进行物流签收！
+  </p>
+  <p class="bg-warning">
+  	物流已签收提示： 订单号 Y97439390 已进行物流签收！
+  </p>
+  <p class="bg-warning">
+  	物流已签收提示： 订单号 Y97439390 已进行物流签收！
+  </p>
+  <p class="bg-warning">
+  	物流已签收提示： 订单号 Y97439390 已进行物流签收！
+  </p>
+  <p class="bg-warning">
+  	物流已签收提示： 订单号 Y97439390 已进行物流签收！
+  </p>
+  <p class="bg-warning">
+  	物流已签收提示： 订单号 Y97439390 已进行物流签收！
+  </p>
+  <p class="bg-warning">
+  	物流已签收提示： 订单号 Y97439390 已进行物流签收！
+  </p>
+  <p class="bg-warning">
+  	物流已签收提示： 订单号 Y97439390 已进行物流签收！
+  </p>
+  <p class="bg-warning">
+  	物流已签收提示： 订单号 Y97439390 已进行物流签收！
+  </p>
+  <p class="bg-warning">
+  	物流已签收提示： 订单号 Y97439390 已进行物流签收！
+  </p>
+  <p class="bg-warning">
+  	物流已签收提示： 订单号 Y97439390 已进行物流签收！
+  </p>
+  <p class="bg-warning">
+  	物流已签收提示： 订单号 Y97439390 已进行物流签收！
+  </p>
   <p class="bg-warning">
   	物流已签收提示： 订单号 Y97439390 已进行物流签收！
   </p>
