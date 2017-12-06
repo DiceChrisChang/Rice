@@ -46,15 +46,16 @@
       $("#noticeClick").click(function(){
         isClick = true;
         return isClick;
+           $(function(){
+             var h = $(document).height()-$(window).height();
+             $(document).scrollTop(h);
+           }) 
       });
       
-      if(isClick){
-          alert("give me something");
-          // $(function(){
-          //   var h = $(document).height()-$(window).height();
-          //   $(document).scrollTop(h);
-          // })   
-      }
+      // if(isClick){
+      //     alert("give me something");
+  
+      // }
 
 
 
