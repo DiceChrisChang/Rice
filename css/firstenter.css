@@ -27,7 +27,6 @@
         .jumbotron{
             padding-bottom: 20px; 
             background-image: url(img/2012.jpg);
-            /* img url 需设置通用路径 仅有登录页面使用 使用 js */
             background-size: cover;
             background-repeat:no-repeat;
             overflow:hidden;

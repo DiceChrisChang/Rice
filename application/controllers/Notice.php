@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Message extends CI_Controller {
+class Notice extends CI_Controller {
 
 	/**
 	 * Index Page for this controller.
@@ -30,18 +30,18 @@ class Message extends CI_Controller {
 		*/
 
 		// head
-		$this->load->view('Message/head.php');
+		$this->load->view('Notice/head.php');
 		// body
-		$this->load->view('Message/navbar.php');
-		$this->load->view('Message/path_navigation.php');
-		$this->load->view('Message/message.php');
-		$this->load->view('Message/foot.php');
+		$this->load->view('Notice/navbar.php');
+		$this->load->view('Notice/path_navigation.php');
+		$this->load->view('Notice/message.php');
+		$this->load->view('Notice/foot.php');
 		// modal
-		$this->load->view('Message/modal.php');
+		$this->load->view('Notice/modal.php');
 		// tail
-		$this->load->view('Message/jquery_tail.php');
+		$this->load->view('Notice/jquery_tail.php');
 		// js
-		$this->load->view('Message/login.js');
+		$this->load->view('Notice/login.js');
 	}
 
 }

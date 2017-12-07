@@ -2,12 +2,12 @@
   <!--
       navbar-default
   -->
-  <nav class="navbar navbar-fixed-top navbar-inverse ">
-      <div class="container-fluid">
+	<nav class="navbar navbar-fixed-top navbar-inverse ">
+  		<div class="container-fluid">
       <!-- 头导航栏 -->
     <div class="navbar-header">
-      <a class="navbar-brand btn btn-primary btn-lg" href="#">Magnet</a>
-       <!--
+    	<a class="navbar-brand btn btn-primary btn-lg" href="#">Magnet</a>
+		   <!--
           icon: glyphicon glyphicon-magnet
        -->
     </div>
@@ -17,7 +17,7 @@
         <li class="col-md-3"><a href="#">仓储</a></li>
         <li class="col-md-3"><a href="#">订单</a></li>
         <li class="col-md-3"><a href="#">统计</a></li>
-        <li class="col-md-3"><a href="#">通知</a></li>
+        <li class="col-md-3" id="noticeClick"><a href="#">通知</a></li>
       </ul>
       <!--
       search  
@@ -43,4 +43,4 @@
       </ul>
    </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
-  </nav>
+	</nav>
