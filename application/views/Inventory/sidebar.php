@@ -1,22 +1,22 @@
 <div style="height: 50px;"></div>
 <div class="panel-group" id="accordion">
-	// js events are not finished
+	<!-- js events are not finished -->
 	<div class="panel panel-primary">
 		<div class="panel-heading">
 			<h4 class="panel-title ">
 				<a data-toggle="collapse" data-parent="#accordion" 
 				   href="#collapseOne">
-					点击我进行展开
+					库存
 				</a>
 			</h4>
 		</div>
 		<div id="collapseOne" class="panel-collapse collapse in">
 			<div class="panel-body">
 				<ul class="nav nav-sidebar">
-					<li><a href="#">分销商管理</a></li>
-					<li><a href="#">分销商管理</a></li>
-					<li><a href="#">分销商管理</a></li>
-					<li><a href="#">分销商管理</a></li>
+					<li><a href="#">产品入库</a></li>
+					<li><a href="#">产品库存</a></li>
+					<li><a href="#">包装材料入库</a></li>
+					<li><a href="#">包装材料库存</a></li>
 				</ul>
 			</div>
 		</div>
@@ -26,17 +26,17 @@
 			<h4 class="panel-title ">
 				<a data-toggle="collapse" data-parent="#accordion" 
 				   href="#collapseOne">
-					点击我进行展开
+					供应商列表
 				</a>
 			</h4>
 		</div>
 		<div id="collapseOne" class="panel-collapse collapse in">
 			<div class="panel-body">
 				<ul class="nav nav-sidebar">
-					<li><a href="#">分销商管理</a></li>
-					<li><a href="#">分销商管理</a></li>
-					<li><a href="#">分销商管理</a></li>
-					<li><a href="#">分销商管理</a></li>
+					<li><a href="#">供应商信息</a></li>
+					<li><a href="#">供应商添加</a></li>
+					<li><a href="#">供应商修改</a></li>
+					<li><a href="#">供应商修改</a></li>
 				</ul>
 			</div>
 		</div>
@@ -46,37 +46,17 @@
 			<h4 class="panel-title ">
 				<a data-toggle="collapse" data-parent="#accordion" 
 				   href="#collapseOne">
-					点击我进行展开
+				   产品列表
 				</a>
 			</h4>
 		</div>
 		<div id="collapseOne" class="panel-collapse collapse in">
 			<div class="panel-body">
 				<ul class="nav nav-sidebar">
-					<li><a href="#">分销商管理</a></li>
-					<li><a href="#">分销商管理</a></li>
-					<li><a href="#">分销商管理</a></li>
-					<li><a href="#">分销商管理</a></li>
-				</ul>
-			</div>
-		</div>
-	</div>
-	<div class="panel panel-primary">
-		<div class="panel-heading">
-			<h4 class="panel-title ">
-				<a data-toggle="collapse" data-parent="#accordion" 
-				   href="#collapseOne">
-					点击我进行展开
-				</a>
-			</h4>
-		</div>
-		<div id="collapseOne" class="panel-collapse collapse in">
-			<div class="panel-body">
-				<ul class="nav nav-sidebar">
-					<li><a href="#">分销商管理</a></li>
-					<li><a href="#">分销商管理</a></li>
-					<li><a href="#">分销商管理</a></li>
-					<li><a href="#">分销商管理</a></li>
+					<li><a href="#">产品信息</a></li>
+					<li><a href="#">添加产品</a></li>
+					<li><a href="#">修改产品</a></li>
+					<li><a href="#">删除产品</a></li>
 				</ul>
 			</div>
 		</div>
@@ -92,7 +72,7 @@
 			<h4 class="panel-title">
 				<a data-toggle="collapse" data-parent="#accordion" 
 				   href="#collapseTwo">
-					点击我进行展开，再次点击我进行折叠。第 2 部分--show 方法
+					点击我进行展开，再次点击我进行折叠。第 2 部分 show 方法
 				</a>
 			</h4>
 		</div>
