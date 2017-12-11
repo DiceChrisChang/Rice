@@ -38,6 +38,7 @@ class Inventory extends CI_Controller {
 		$this->load->view('Inventory/head.php');
 		// body
 		$this->load->view('Inventory/navbar.php');
+		//需要为侧手风琴菜单
 		$this->load->view('Inventory/sidebar.php');
 		$this->load->view('Inventory/path_navigation.php');
 		$this->load->view('Inventory/operate.php');

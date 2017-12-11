@@ -23,5 +23,104 @@
     <link rel="stylesheet" type="text/css" href="css/path-navigation.css">
     <!-- 查看视频修改-后盾 -->
 
+	   <style type="text/css">
+    	/*
+    	备用css
+    	*/
+    	html{
+            width:100%;
+            overflow-x:hidden;
+        }
+        body{
+            margin-bottom: 50px;
+        }
+        .foot_p{
+            color:white;
+            text-align: center;
+        }
+        .img-circle{
+            border-radius: 20%;
+            margin-top: 60px;
+        }
+        .jumbotron h1{
+            margin-top: 170px;
+        }
+        .jumbotron p{
+            margin-top: 40px;
+            font-size: 25px;
+        }
+        #loginButton{
+            margin-top: 130px;
+            margin-bottom: 80px;
+        }
+        .jumbotron{
+            padding-bottom: 20px; 
+            background-image: url(img/2012.jpg);
+            background-size: cover;
+            background-repeat:no-repeat;
+            overflow:hidden;
+            width:100%;
+            min-height: 692px;
+            overflow: hidden;
+            margin-top:51px;
+            background-size:100% auto;
+            margin-bottom: 0px;
+           
+        } 
+        .container-fluid{
+            width:100%;
+            height:100%;
+        }
+        .btn{
+            margin-right: 6px;
+            position:relative;
+            top:6px;
+        }
+        .btn-lg{
+            position:relative;
+            top:0px;            
+        }
+        .foot_p{
+            margin-top: 10px;
+        }
+        /*
+        path-navigation
+        */
+        .breadcrumb{
+            margin-bottom: 0px;
+        }
+        /*
+        notice css
+        */
+        .img-rounded{
+            float: left;
+            width: 470px;
+            height: 650px;
+        }
+        #navbar-notice{
+            width: 1100px;
+            height: auto;
+            float: right;
+            position: relative;
+            left: 0px;
+            overflow: auto;
+        }
+        .bg-primary,.bg-info,.bg-success,.bg-warning{
+            padding: 8px 3px 8px 3px;
+            margin: 0px  5px 5px 4px;
+        }
+        #ios,#svn,#jmeter{
+            visibility:hidden;
+            margin :0px 0px 0px 0px;
+            height: 2px;
+        }
+        /*
+        modal
+        */
+        .modal-header{
+            padding: 0px 0px 0px 0px;
+            margin: 0px  0px 0px 0px;
+        }
 
+    </style>
 </head>

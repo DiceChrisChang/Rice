@@ -1,26 +1,93 @@
-
-
-
-
+<div style="height: 50px;"></div>
 <div class="panel-group" id="accordion">
-	<div class="panel panel-default">
+	// js events are not finished
+	<div class="panel panel-primary">
 		<div class="panel-heading">
-			<h4 class="panel-title">
+			<h4 class="panel-title ">
 				<a data-toggle="collapse" data-parent="#accordion" 
 				   href="#collapseOne">
-					点击我进行展开，再次点击我进行折叠。第 1 部分--hide 方法
+					点击我进行展开
 				</a>
 			</h4>
 		</div>
 		<div id="collapseOne" class="panel-collapse collapse in">
 			<div class="panel-body">
-				Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred 
-				nesciunt sapiente ea proident. Ad vegan excepteur butcher vice 
-				lomo.
+				<ul class="nav nav-sidebar">
+					<li><a href="#">分销商管理</a></li>
+					<li><a href="#">分销商管理</a></li>
+					<li><a href="#">分销商管理</a></li>
+					<li><a href="#">分销商管理</a></li>
+				</ul>
 			</div>
 		</div>
 	</div>
-	<div class="panel panel-success">
+	<div class="panel panel-primary">
+		<div class="panel-heading">
+			<h4 class="panel-title ">
+				<a data-toggle="collapse" data-parent="#accordion" 
+				   href="#collapseOne">
+					点击我进行展开
+				</a>
+			</h4>
+		</div>
+		<div id="collapseOne" class="panel-collapse collapse in">
+			<div class="panel-body">
+				<ul class="nav nav-sidebar">
+					<li><a href="#">分销商管理</a></li>
+					<li><a href="#">分销商管理</a></li>
+					<li><a href="#">分销商管理</a></li>
+					<li><a href="#">分销商管理</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div class="panel panel-primary">
+		<div class="panel-heading">
+			<h4 class="panel-title ">
+				<a data-toggle="collapse" data-parent="#accordion" 
+				   href="#collapseOne">
+					点击我进行展开
+				</a>
+			</h4>
+		</div>
+		<div id="collapseOne" class="panel-collapse collapse in">
+			<div class="panel-body">
+				<ul class="nav nav-sidebar">
+					<li><a href="#">分销商管理</a></li>
+					<li><a href="#">分销商管理</a></li>
+					<li><a href="#">分销商管理</a></li>
+					<li><a href="#">分销商管理</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div class="panel panel-primary">
+		<div class="panel-heading">
+			<h4 class="panel-title ">
+				<a data-toggle="collapse" data-parent="#accordion" 
+				   href="#collapseOne">
+					点击我进行展开
+				</a>
+			</h4>
+		</div>
+		<div id="collapseOne" class="panel-collapse collapse in">
+			<div class="panel-body">
+				<ul class="nav nav-sidebar">
+					<li><a href="#">分销商管理</a></li>
+					<li><a href="#">分销商管理</a></li>
+					<li><a href="#">分销商管理</a></li>
+					<li><a href="#">分销商管理</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+
+
+
+
+
+<!--
+ 	<div class="panel panel-success">
 		<div class="panel-heading">
 			<h4 class="panel-title">
 				<a data-toggle="collapse" data-parent="#accordion" 
@@ -71,4 +138,5 @@
 			</div>
 		</div>
 	</div>
+ -->
 </div>
