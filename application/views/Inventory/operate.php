@@ -40,5 +40,9 @@
            	<label for="exampleInputEmail2">Email</label>
            	<input type="email" class="form-control" id="exampleInputEmail2" placeholder="jane.doe@example.com">
          	</div>
-         	<button type="submit" class="btn btn-primary">Send  invitation</button>
+         	<button type="submit" class="btn btn-primary">筛选 </button>
+
+
+         	<button type="button" class="btn btn-primary"    data-toggle="#" data-target="#">删除
+            </button>
        </form>

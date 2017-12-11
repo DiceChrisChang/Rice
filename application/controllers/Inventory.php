@@ -42,6 +42,7 @@ class Inventory extends CI_Controller {
 		$this->load->view('Inventory/sidebar.php');
 		$this->load->view('Inventory/path_navigation.php');
 		$this->load->view('Inventory/operate.php');
+		$this->load->view('Inventory/table_data.php');
 		$this->load->view('Inventory/foot.php');
 		// modal
 		$this->load->view('Inventory/modal.php');
