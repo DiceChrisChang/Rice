@@ -31,3 +31,6 @@
   	  </tr>
   	  
 </table>
+<!-- 
+ table and page should in the same div block
+ -->
