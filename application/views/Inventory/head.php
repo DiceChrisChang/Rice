@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
-	<title><?php echo $title ?></title>
+	<title></title>
 	<!-- Bootstrap core CSS -->
     <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
     <!-- 最新版本的 Bootstrap 核心 CSS 文件 -->
@@ -120,6 +120,23 @@
         .modal-header{
             padding: 0px 0px 0px 0px;
             margin: 0px  0px 0px 0px;
+        }
+		/*
+		sidebar.php
+		*/
+        .sidebar{
+			width: 212px;
+        }
+        .panel-body{
+        	padding: 3px 8px 3px 8px;
+        }
+        .side-panel{
+        	margin-top: 2px;
+        	margin-bottom: 2px;
+        }
+        .breadcrumb{
+        
+        	display: inline-block;
         }
 
     </style>

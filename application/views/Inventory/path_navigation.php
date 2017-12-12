@@ -1,4 +1,5 @@
-	<!-- 路径 导航 小模块 -->
+<div class="content">
+  <!-- 路径 导航 小模块 -->
 	<ol class="breadcrumb">
 		<!--
 		面包屑导航

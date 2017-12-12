@@ -1,7 +1,8 @@
 <div style="height: 50px;"></div>
+<div class="col-sm-4 col-md-3 sidebar">
 <div class="panel-group" id="accordion">
 	<!-- js events are not finished -->
-	<div class="panel panel-primary">
+	<div class="panel panel-primary  side-panel">
 		<div class="panel-heading">
 			<h4 class="panel-title ">
 				<a data-toggle="collapse" data-parent="#accordion" 
@@ -21,7 +22,7 @@
 			</div>
 		</div>
 	</div>
-	<div class="panel panel-primary">
+	<div class="panel panel-primary  side-panel">
 		<div class="panel-heading">
 			<h4 class="panel-title ">
 				<a data-toggle="collapse" data-parent="#accordion" 
@@ -41,7 +42,7 @@
 			</div>
 		</div>
 	</div>
-	<div class="panel panel-primary">
+	<div class="panel panel-primary  side-panel">
 		<div class="panel-heading">
 			<h4 class="panel-title ">
 				<a data-toggle="collapse" data-parent="#accordion" 
@@ -119,4 +120,5 @@
 		</div>
 	</div>
  -->
+</div>
 </div>
