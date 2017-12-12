@@ -1,5 +1,7 @@
 <div style="height: 50px;"></div>
-<div class="col-sm-4 col-md-3 sidebar">
+<div class="container-fluid">
+<div class="row">
+<div class="col-sm-3 col-md-2 sidebar">
 <div class="panel-group" id="accordion">
 	<!-- js events are not finished -->
 	<div class="panel panel-primary  side-panel">

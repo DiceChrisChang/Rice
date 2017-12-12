@@ -1,4 +1,5 @@
-<div class="content">
+<div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+
   <!-- 路径 导航 小模块 -->
 	<ol class="breadcrumb">
 		<!--
@@ -13,4 +14,5 @@
   		-->
   		<li class="active">通知</li>
   </ol>
+
 

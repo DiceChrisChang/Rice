@@ -124,20 +124,6 @@
 		/*
 		sidebar.php
 		*/
-        .sidebar{
-			width: 212px;
-        }
-        .panel-body{
-        	padding: 3px 8px 3px 8px;
-        }
-        .side-panel{
-        	margin-top: 2px;
-        	margin-bottom: 2px;
-        }
-        .breadcrumb{
-        
-        	display: inline-block;
-        }
 
     </style>
 

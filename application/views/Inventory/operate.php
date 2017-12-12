@@ -1,13 +1,12 @@
-	<!-- <div class="container">  -->
+
 	  <!-- search operate navbar -->
 	  <nav class="navbar navbar-inverse">
-	  	 <div class="container-fluid">
+	  	 
 	  		<button type="button" class="btn btn-primary" aria-label="Left Align">
 	 			<span class="glyphicon glyphicon-list" aria-hidden="true"></span>
 			</button>
 	        <button type="button" class="btn btn-primary"    data-toggle="#" data-target="#">入库操作
 	        </button>
-	     </div>
 	       
 	  </nav>
        <form class="form-inline">
@@ -37,4 +36,3 @@
          	<button type="button" class="btn btn-primary"    data-toggle="#" data-target="#">删除
             </button>
        </form>
-    <!-- </div>  -->
