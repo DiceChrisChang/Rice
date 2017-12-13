@@ -84,6 +84,12 @@
             margin-top: 10px;
         }
         /*
+        navbar
+        */
+        .navbar{
+            margin-bottom: 0px;
+        }
+        /*
         path-navigation
         */
         .breadcrumb{
@@ -126,6 +132,9 @@
 		*/
         .sidebar{
             padding:2px 2px 0px 2px;
+        }
+        .delCheck{
+            padding-left: 5px;
         }
 
     </style>

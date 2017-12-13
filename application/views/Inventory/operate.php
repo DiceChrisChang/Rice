@@ -60,8 +60,8 @@
           </div>
           <div class="row">
              <button type="submit" class="btn btn-primary">筛选 </button>
-             <button type="button" class="btn btn-primary" data-toggle="#">删除</button>
              <button type="button" class="btn btn-primary" data-target="#">全选</button>
+             <button type="button" class="btn btn-primary" data-toggle="#">删除</button>
           </div> 
 
 
