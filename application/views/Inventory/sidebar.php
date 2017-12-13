@@ -8,12 +8,12 @@
 		<div class="panel-heading">
 			<h4 class="panel-title ">
 				<a data-toggle="collapse" data-parent="#accordion" 
-				   href="#collapseOne">
+				   href="#collapse1">
 					库存
 				</a>
 			</h4>
 		</div>
-		<div id="collapseOne" class="panel-collapse collapse in">
+		<div id="collapse1" class="panel-collapse collapse in">
 			<div class="panel-body">
 				<ul class="nav nav-sidebar">
 					<li><a href="#">产品入库</a></li>
@@ -28,12 +28,12 @@
 		<div class="panel-heading">
 			<h4 class="panel-title ">
 				<a data-toggle="collapse" data-parent="#accordion" 
-				   href="#collapseOne">
+				   href="#collapse2">
 					供应商列表
 				</a>
 			</h4>
 		</div>
-		<div id="collapseOne" class="panel-collapse collapse in">
+		<div id="collapse2" class="panel-collapse collapse in">
 			<div class="panel-body">
 				<ul class="nav nav-sidebar">
 					<li><a href="#">供应商信息</a></li>
@@ -48,12 +48,12 @@
 		<div class="panel-heading">
 			<h4 class="panel-title ">
 				<a data-toggle="collapse" data-parent="#accordion" 
-				   href="#collapseOne">
+				   href="#collapse3">
 				   产品列表
 				</a>
 			</h4>
 		</div>
-		<div id="collapseOne" class="panel-collapse collapse in">
+		<div id="collapse3" class="panel-collapse collapse in">
 			<div class="panel-body">
 				<ul class="nav nav-sidebar">
 					<li><a href="#">产品信息</a></li>

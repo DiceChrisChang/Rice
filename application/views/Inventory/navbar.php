@@ -44,3 +44,13 @@
    </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
 	</nav>
+
+  <!--
+  充当占位符的div块，无实质内容 
+  fixed 悬浮出来的 footer 
+  height：50px ; 
+  <div></div>
+  需要同级
+  -->
+
+

@@ -60,12 +60,14 @@
   
       // }
 
-    $(function () { $('#collapseFour').collapse({
-        toggle: false
-    })});
-    $(function () { $('#collapseTwo').collapse('show')});
-    $(function () { $('#collapseThree').collapse('toggle')});
-
+    $(function () { $('#collapse3').collapse({toggle: false})});
+    // $(function () { $('#collapse2').collapse({toggle: false})});
+    // $(function () { $('#collapse1').collapse({toggle: false})});
+    $(function () { $('#collapse3').collapse('show')});
+    $(function () { $('#collapse2').collapse('show')});
+    $(function () { $('#collapse1').collapse('show')});
+    // $(function () { $('#collapse2').collapse('toggle')});
+    // $(function () { $('#collapse1').collapse('hide')});
 
 
     </script>

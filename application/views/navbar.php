@@ -6,7 +6,7 @@
   		<div class="container-fluid">
       <!-- 头导航栏 -->
     <div class="navbar-header">
-    	<a class="navbar-brand btn btn-primary btn-lg" href="#">Magnet</a>
+    	<a class="navbar-brand btn btn-primary btn-lg" href="http://localhost/rice/index.php">Magnet</a>
 		   <!--
           icon: glyphicon glyphicon-magnet
        -->

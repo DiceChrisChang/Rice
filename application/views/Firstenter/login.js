@@ -59,6 +59,10 @@
       //     alert("give me something");
   
       // }
+    $(function () { $('#collapse3').collapse({toggle: false})});
+    //$(function () { $('#collapseTwo').collapse('show')});
+    $(function () { $('#collapse2').collapse('toggle')});
+    $(function () { $('#collapse1').collapse('hide')});
 
 
 
