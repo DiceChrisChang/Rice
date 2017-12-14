@@ -1,4 +1,4 @@
-<div class="col-sm-9  col-md-10  main">
+
 
   <!-- 路径 导航 小模块 -->
 	<ol class="breadcrumb">

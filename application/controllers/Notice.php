@@ -30,18 +30,18 @@ class Notice extends CI_Controller {
 		*/
 
 		// head
-		$this->load->view('Notice/head.php');
+		$this->load->view('head.php');
 		// body
-		$this->load->view('Notice/navbar.php');
-		$this->load->view('Notice/path_navigation.php');
+		$this->load->view('navbar.php');
+		$this->load->view('path_navigation.php');
 		$this->load->view('Notice/message.php');
-		$this->load->view('Notice/foot.php');
+		$this->load->view('foot.php');
 		// modal
-		$this->load->view('Notice/modal.php');
+		$this->load->view('modal.php');
 		// tail
-		$this->load->view('Notice/jquery_tail.php');
+		$this->load->view('jquery_tail.php');
 		// js
-		$this->load->view('Notice/login.js');
+		$this->load->view('login.js');
 	}
 
 }

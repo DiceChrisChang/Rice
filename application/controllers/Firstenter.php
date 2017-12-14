@@ -35,17 +35,17 @@ class Firstenter extends CI_Controller {
 		//$content = index.php;
 
 		// head
-		$this->load->view('Firstenter/head.php');
+		$this->load->view('head.php');
 		// body
-		$this->load->view('Firstenter/navbar.php');
+		$this->load->view('navbar.php');
 		$this->load->view('Firstenter/index.php');
-		$this->load->view('Firstenter/foot.php');
+		$this->load->view('foot.php');
 		// modal
-		$this->load->view('Firstenter/modal.php');
+		$this->load->view('modal.php');
 		// tail
-		$this->load->view('Firstenter/jquery_tail.php');
+		$this->load->view('jquery_tail.php');
 		// js
-		$this->load->view('Firstenter/login.js');
+		$this->load->view('login.js');
 	}
 
 }

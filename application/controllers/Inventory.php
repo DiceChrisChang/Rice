@@ -35,22 +35,22 @@ class Inventory extends CI_Controller {
 		//$content = index.php;
 
 		// head
-		$this->load->view('Inventory/head.php');
+		$this->load->view('head.php');
 		// body
-		$this->load->view('Inventory/navbar.php');
+		$this->load->view('navbar.php');
 		//需要为侧手风琴菜单
         $this->load->view('Inventory/sidebar.php');
-        $this->load->view('Inventory/path_navigation.php');
+        $this->load->view('path_navigation.php');
         $this->load->view('Inventory/operate.php');
         $this->load->view('Inventory/table_data.php');
         $this->load->view('Inventory/page.php');
-		$this->load->view('Inventory/foot.php');
+		$this->load->view('foot.php');
 		// modal
-		$this->load->view('Inventory/modal.php');
+		$this->load->view('modal.php');
 		// tail
-		$this->load->view('Inventory/jquery_tail.php');
+		$this->load->view('jquery_tail.php');
 		// js
-		$this->load->view('Inventory/login.js');
+		$this->load->view('login.js');
 	}
 
 }

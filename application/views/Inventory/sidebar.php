@@ -65,3 +65,4 @@
 	</div>
 		</div>
 	</div>
+<div class="col-sm-9  col-md-10  main">
