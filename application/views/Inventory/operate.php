@@ -1,30 +1,16 @@
-
-  <!-- search operate navbar -->
-
-
-
-
-
-
-
-<!-- <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
-  Button with data-target
-</button>
- -->
-
-
-
-
-
     <!-- search operate navbar -->
     <nav class="navbar navbar-inverse">
        
         <button type="button" class="btn btn-primary" aria-label="Left Align" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
         <span class="glyphicon glyphicon-list" aria-hidden="true"></span>
-      </button>
-          <button type="button" class="btn btn-primary"    data-toggle="#" data-target="#">入库操作
+        </button>
+          
+          <!-- 按钮触发模态框 -->
+          <!-- Button trigger modal -->
+          <button type="button" class="btn btn-primary " data-toggle="modal" data-target="#Modal">
+          入库操作
           </button>
-         
+
     </nav>
 
 

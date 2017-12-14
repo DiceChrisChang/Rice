@@ -39,7 +39,6 @@
 					<li><a href="#">供应商信息</a></li>
 					<li><a href="#">供应商添加</a></li>
 					<li><a href="#">供应商修改</a></li>
-					<li><a href="#">供应商修改</a></li>
 				</ul>
 			</div>
 		</div>

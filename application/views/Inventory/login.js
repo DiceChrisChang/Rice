@@ -69,5 +69,10 @@
     // $(function () { $('#collapse2').collapse('toggle')});
     // $(function () { $('#collapse1').collapse('hide')});
 
+    // $(function() {
+    //     $('#myModal').modal({
+    //         keyboard: true
+    //     })
+    // });
 
     </script>

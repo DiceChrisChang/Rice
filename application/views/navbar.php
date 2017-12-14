@@ -2,7 +2,7 @@
   <!--
       navbar-default
   -->
-	<nav class="navbar navbar-fixed-top navbar-inverse ">
+ <nav class="navbar navbar-fixed-top navbar-inverse ">
   		<div class="container-fluid">
       <!-- 头导航栏 -->
     <div class="navbar-header">
@@ -44,3 +44,5 @@
    </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
 	</nav>
+
+  <!-- -->
