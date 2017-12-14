@@ -1,3 +1,4 @@
+<!-- should coming from mySQL -->
 <table class="table table-hover table-striped">
 	  <thead>
       	<tr>
