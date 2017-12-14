@@ -1,4 +1,10 @@
-	<div>
+	
+<!--
+  需要交互式响应 
+ -->
+
+
+  <div>
 	  <img src="img/pp.jpg" class="img-rounded">
 	</div>
 	<nav id="navbar-notice" class="navbar navbar-default navbar-static navbar-inverse " role="navigation">

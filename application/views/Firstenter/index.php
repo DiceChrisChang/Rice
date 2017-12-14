@@ -1,8 +1,5 @@
   <!-- 登录页面 body 主体 -->
-
-	
-
-
+  <!-- 需要修改图片 响应式 -->
 	<div class="container-fluid">
 		<div class="row">
 			
