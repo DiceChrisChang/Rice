@@ -100,7 +100,7 @@
         */
         .img-rounded{
             float: left;
-            width: 470px;
+            width: 450px;
             height: 650px;
         }
         #navbar-notice{
