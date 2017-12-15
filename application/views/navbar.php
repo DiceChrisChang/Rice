@@ -44,5 +44,4 @@
    </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
 	</nav>
-
-  <!-- -->
+  <div style="height: 50px;"></div>
