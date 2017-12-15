@@ -5,7 +5,7 @@
 
 
   <div>
-	  <img src="img/pp.jpg" class="img-rounded">
+	  <img src="/rice/img/pp.jpg" class="img-rounded"/>
 	</div>
 	<nav id="navbar-notice" class="navbar navbar-default navbar-static navbar-inverse " role="navigation">
   <div class="container-fluid"> 
