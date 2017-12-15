@@ -5,11 +5,10 @@
 
 <div class="container-fluid">
   <div class="row">
-       <div class="col-xs-6 col-md-3">
-          <img src="/rice/img/pp.jpg" class="img-rounded"/>
-       </div>
-    <nav id="navbar-notice" class="navbar navbar-default navbar-static navbar-inverse col-xs-12 col-md-9" role="navigation">
-      <div class="container-fluid"> 
+       <!-- <div class="col-sm-3  col-md-2"> -->
+          <img src="/rice/img/pp.jpg" class="img-rounded col-sm-3  col-md-2"/>
+       <!-- </div> -->
+    <nav id="navbar-notice" class="navbar navbar-default navbar-static navbar-inverse col-sm-9  col-md-10" role="navigation">
         <div class="navbar-header">
         <!-- button 的用处 -->
            <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".bs-js-navbar-scrollspy">
@@ -26,8 +25,7 @@
             <li><a href="#svn">订单</a></li>
             <li><a href="#jmeter">物流</a></li>
           </ul>
-        </div>
-      </div> 
+        </div> 
     </nav>
     <div id="navbar-notice" data-spy="scroll" data-target="#navbar-notice" data-offset="4" style="height:590px;overflow:auto; position: relative;top: -15px;color: black; margin-bottom:30px">
       <h4 id="ios">库存</h4>

@@ -62,7 +62,6 @@
             width:100%;
             min-height: 692px;
             overflow: hidden;
-            margin-top:51px;
             background-size:100% auto;
             margin-bottom: 0px;
            
@@ -98,10 +97,11 @@
         /*
         notice css
         */
+        /*        
         .img-rounded{
             float: left;
-            width: 450px;
-            height: 650px;
+            width: 260.992px;
+            height: auto;
         }
         #navbar-notice{
             width: 1100px;
@@ -110,7 +110,8 @@
             position: relative;
             left: 0px;
             overflow: auto;
-        }
+        } 
+        */
         .bg-primary,.bg-info,.bg-success,.bg-warning{
             padding: 8px 3px 8px 3px;
             margin: 0px  5px 5px 4px;

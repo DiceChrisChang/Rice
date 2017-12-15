@@ -19,15 +19,6 @@
         <li class="col-md-3"><a href="#">统计</a></li>
         <li class="col-md-3" id="noticeClick"><a href="http://localhost/rice/index.php/notice">通知</a></li>
       </ul>
-      <!--
-      search  
-      <form class="navbar-form navbar-left">
-        <div class="form-group">
-          <input type="text" class="form-control" placeholder="Search">
-        </div>
-        <button type="submit" class="btn btn-default">Submit</button>
-      </form>
-      -->
       <ul class="nav navbar-nav navbar-right">
         <!-- 按钮触发模态框  -->
         <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">
