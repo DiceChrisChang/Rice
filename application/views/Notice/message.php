@@ -8,7 +8,9 @@
        <!-- <div class="col-sm-3  col-md-2"> -->
           <img src="/rice/img/pp.jpg" class="img-rounded col-sm-3  col-md-2"/>
        <!-- </div> -->
-    <nav id="navbar-notice" class="navbar navbar-default navbar-static navbar-inverse col-sm-9  col-md-10" role="navigation">
+
+  <div class="col-sm-9  col-md-10">
+    <nav id="navbar-notice" class="navbar navbar-default navbar-static navbar-inverse " role="navigation">
         <div class="navbar-header">
         <!-- button 的用处 -->
            <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".bs-js-navbar-scrollspy">
@@ -27,7 +29,7 @@
           </ul>
         </div> 
     </nav>
-    <div id="navbar-notice" data-spy="scroll" data-target="#navbar-notice" data-offset="4" style="height:590px;overflow:auto; position: relative;top: -15px;color: black; margin-bottom:30px">
+    <div id="navbar-notice" data-spy="scroll" data-target="#navbar-notice" data-offset="4" style="height:590px;overflow:auto; position: relative;color: black; margin-bottom:30px">
       <h4 id="ios">库存</h4>
       <p class="bg-primary">
         产品：gx01z 库存已低至最小库存！
@@ -202,6 +204,7 @@
         物流已签收提示： 订单号 Y97439390 已进行物流签收！
       </p>
     </div>
+  </div>
   </div>
 </div>
 

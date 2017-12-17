@@ -99,7 +99,7 @@
         */
                
         .img-rounded{
-            min-height: 630px;
+            min-height: 642px;
             padding :5px 5px 0px 5px;
             overflow:hidden;
         }
