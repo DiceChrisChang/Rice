@@ -97,12 +97,12 @@
         /*
         notice css
         */
-        /*        
+               
         .img-rounded{
-            float: left;
-            width: 260.992px;
-            height: auto;
+            min-height: 630px;
+            padding :0px 5px 0px 5px;
         }
+        /*
         #navbar-notice{
             width: 1100px;
             height: auto;
