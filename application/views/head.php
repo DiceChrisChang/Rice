@@ -100,7 +100,8 @@
                
         .img-rounded{
             min-height: 630px;
-            padding :0px 5px 0px 5px;
+            padding :5px 5px 0px 5px;
+            overflow:hidden;
         }
         /*
         #navbar-notice{
