@@ -16,7 +16,7 @@
       <ul class="nav navbar-nav navbar-left">
         <li class="col-md-3"><a href="http://localhost/rice/index.php/inventory">仓储</a></li>
         <li class="col-md-3"><a href="#">订单</a></li>
-        <li class="col-md-3"><a href="#">统计</a></li>
+        <li class="col-md-3"><a href="http://localhost/rice/index.php/chart">统计</a></li>
         <li class="col-md-3" id="noticeClick"><a href="http://localhost/rice/index.php/notice">通知</a></li>
       </ul>
       <ul class="nav navbar-nav navbar-right">

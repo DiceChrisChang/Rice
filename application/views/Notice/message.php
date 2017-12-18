@@ -6,7 +6,7 @@
 <div class="container-fluid">
   <div class="row">
        <!-- <div class="col-sm-3  col-md-2"> -->
-          <img src="/rice/img/pp.jpg" class="img-rounded col-sm-3  col-md-2"/>
+          <img src="/rice/img/pp.jpg" class="img-rounded img-responsive col-sm-3  col-md-2"/>
        <!-- </div> -->
 
   <div class="col-sm-9  col-md-10">
