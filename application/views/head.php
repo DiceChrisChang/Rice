@@ -16,6 +16,7 @@
 	<!-- 
 		自行引入的 CSS 文件
 		成功引入
+        检查当仅有 index.php 一个接口时引入的 css 文件一直存在
 	-->
 	<!-- 
 	<link rel="stylesheet" type="text/css" href="css/firstenter.css">
