@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Generation Time: 2017-12-27 10:55:27
+-- Generation Time: 2017-12-27 11:15:48
 -- 服务器版本： 5.7.19
 -- PHP Version: 5.6.31
 
@@ -21,6 +21,26 @@ SET time_zone = "+00:00";
 --
 -- Database: `rice`
 --
+
+-- --------------------------------------------------------
+
+--
+-- 表的结构 `address`
+--
+
+DROP TABLE IF EXISTS `address`;
+CREATE TABLE IF NOT EXISTS `address` (
+  `id` int(11) NOT NULL COMMENT '分销商地址id',
+  `reseller_id` int(11) NOT NULL COMMENT '分销商id',
+  `contacter` varchar(22) NOT NULL COMMENT '联系人',
+  `contact_number` int(11) NOT NULL COMMENT '联系人地址',
+  `address` varchar(45) NOT NULL COMMENT '地址',
+  `create_time` timestamp NOT NULL COMMENT '创建时间',
+  `modified_time` timestamp NOT NULL COMMENT '修改时间',
+  PRIMARY KEY (`id`),
+  KEY `reseller_id` (`reseller_id`),
+  KEY `reseller_id_2` (`reseller_id`)
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
@@ -82,7 +102,7 @@ CREATE TABLE IF NOT EXISTS `reseller` (
   `director_number` int(11) NOT NULL COMMENT '负责人电话',
   `create_time` timestamp NOT NULL COMMENT '创建时间',
   `modified_time` timestamp NOT NULL COMMENT '修改时间',
-  `address` varchar(45) NOT NULL COMMENT '配货地址',
+  `address_id` int(11) NOT NULL COMMENT '分销商地址id',
   PRIMARY KEY (`id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 COMMIT;
