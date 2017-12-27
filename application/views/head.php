@@ -29,6 +29,8 @@
     <style type="text/css">
     	/*
     	备用css
+
+        finally delete
     	*/
     	html{
             width:100%;
