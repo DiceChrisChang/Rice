@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Chart extends CI_Controller {
+class Manager extends CI_Controller {
 
 	/**
 	 * Index Page for this controller.
@@ -34,23 +34,8 @@ class Chart extends CI_Controller {
 		*/ 
 		//$content = index.php;
 
-		// head
-		$this->load->view('head.php');
-		// body
-		$this->load->view('navbar.php');
-		//需要为侧手风琴菜单
-        $this->load->view('Inventory/sidebar.php');
-        $this->load->view('path_navigation.php');
-        // $this->load->view('Inventory/operate.php');
-        // $this->load->view('Inventory/table_data.php');
-        // $this->load->view('Inventory/page.php');
-		$this->load->view('foot.php');
-		// modal
-		$this->load->view('modal.php');
-		// tail
-		$this->load->view('jquery_tail.php');
-		// js
-		$this->load->view('login.js');
+    	$this->load->view("Manager/backstage.php");
+
 	}
 
 }
