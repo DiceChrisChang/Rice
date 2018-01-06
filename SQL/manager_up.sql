@@ -120,11 +120,11 @@
 
 
 -- 创建 dict table 
-DROP TABLE IF EXISTS `dict`;
-CREATE TABLE IF NOT EXISTS `dict` (
-  `id` int(11) NOT NULL AUTO_INCREMENT COMMENT '主键id',
-  `pid` int(11) DEFAULT NULL COMMENT '父级字典',
-  `name` varchar(255) DEFAULT NULL COMMENT '名称',
-  `tips` varchar(255) DEFAULT NULL COMMENT '提示',
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='字典表';
+-- DROP TABLE IF EXISTS `dict`;
+-- CREATE TABLE IF NOT EXISTS `dict` (
+--   `id` int(11) NOT NULL AUTO_INCREMENT COMMENT '主键id',
+--   `pid` int(11) DEFAULT NULL COMMENT '父级字典',
+--   `name` varchar(255) DEFAULT NULL COMMENT '名称',
+--   `tips` varchar(255) DEFAULT NULL COMMENT '提示',
+--   PRIMARY KEY (`id`)
+-- ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='字典表';
