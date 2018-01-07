@@ -142,29 +142,38 @@
 --   PRIMARY KEY (`id`)
 -- ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COMMENT='菜单表';
 
-INSERT INTO `menu`(`code`,`pcode`,`pcodes`,`name`,`url`,`levels`,`tips`,`status`) VALUES
-('system','0','[0],','系统管理','',1,NULL,1),
-('mgr','system','[0],[system],','用户管理','',2,NULL,1),
-('mgr_add',' mgr','[0],[system],[mgr],','添加用户','',3,NULL,1),
-('mgr_setRole',' mgr','[0],[system],[mgr],','分配角色给用户','',3,NULL,1),
-('mgr_edit',' mgr','[0],[system],[mgr],','修改用户','',3,NULL,1),
-('mgr_delete',' mgr','[0],[system],[mgr],','删除用户','',3,NULL,1),
-('mgr_freeze',' mgr','[0],[system],[mgr],','冻结用户','',3,NULL,1),
-('mgr_unfreeze',' mgr','[0],[system],[mgr],','解除用户冻结','',3,NULL,1),
-('mgr_add',' mgr','[0],[system],[mgr],','添加用户','',3,NULL,1),
-('role', 'system', '[0],[system],', '角色管理','',2,NULL,1),
-('role_add', 'role', '[0],[system],[role],', '添加角色','',3,NULL,1),
-('role_edit', 'role', '[0],[system],[role],', '修改角色','',3,NULL,1),
-('role_delete', 'role', '[0],[system],[role],', '删除角色','',3,NULL,1),
-('role_setAuthority', 'role', '[0],[system],[role],', '配置权限','',3,NULL,1),
-('menu', 'system', '[0],[system],', '菜单管理','',2,NULL,1),
-('menu_add', 'menu', '[0],[system],[menu],', '添加菜单','',3,NULL,1),
-('menu_edit', 'menu', '[0],[system],[menu],', '修改菜单','',3,NULL,1),
-('menu_delete', 'menu', '[0],[system],[menu],', '删除菜单','',3,NULL,1),
-('log', 'system', '[0],[system],', '业务日志','', 2, NULL, 1),
-('log_clean', 'log', '[0],[system],[log],', '清空日志','', 3, NULL, 1),
-('dept', 'system', '[0],[system],', '部门管理','',2, NULL,1),
-('dept_add', 'dept', '[0],[system],[dept],', '添加部门','',3, NULL, 1),
-('dept_update', 'dept', '[0],[system],[dept],', '修改部门','',3, NULL, 1),
-('dept_delete', 'dept', '[0],[system],[dept],', '删除部门', '', 3,NULL, 1);
+-- 向 menu table 插入数据
+-- INSERT INTO `menu`(`code`,`pcode`,`pcodes`,`name`,`url`,`levels`,`tips`,`status`) VALUES
+-- ('system','0','[0],','系统管理','',1,NULL,1),
+-- ('mgr','system','[0],[system],','用户管理','',2,NULL,1),
+-- ('mgr_add',' mgr','[0],[system],[mgr],','添加用户','',3,NULL,1),
+-- ('mgr_setRole',' mgr','[0],[system],[mgr],','分配角色给用户','',3,NULL,1),
+-- ('mgr_edit',' mgr','[0],[system],[mgr],','修改用户','',3,NULL,1),
+-- ('mgr_delete',' mgr','[0],[system],[mgr],','删除用户','',3,NULL,1),
+-- ('mgr_freeze',' mgr','[0],[system],[mgr],','冻结用户','',3,NULL,1),
+-- ('mgr_unfreeze',' mgr','[0],[system],[mgr],','解除用户冻结','',3,NULL,1),
+-- ('mgr_add',' mgr','[0],[system],[mgr],','添加用户','',3,NULL,1),
+-- ('role', 'system', '[0],[system],', '角色管理','',2,NULL,1),
+-- ('role_add', 'role', '[0],[system],[role],', '添加角色','',3,NULL,1),
+-- ('role_edit', 'role', '[0],[system],[role],', '修改角色','',3,NULL,1),
+-- ('role_delete', 'role', '[0],[system],[role],', '删除角色','',3,NULL,1),
+-- ('role_setAuthority', 'role', '[0],[system],[role],', '配置权限','',3,NULL,1),
+-- ('menu', 'system', '[0],[system],', '菜单管理','',2,NULL,1),
+-- ('menu_add', 'menu', '[0],[system],[menu],', '添加菜单','',3,NULL,1),
+-- ('menu_edit', 'menu', '[0],[system],[menu],', '修改菜单','',3,NULL,1),
+-- ('menu_delete', 'menu', '[0],[system],[menu],', '删除菜单','',3,NULL,1),
+-- ('log', 'system', '[0],[system],', '业务日志','', 2, NULL, 1),
+-- ('log_clean', 'log', '[0],[system],[log],', '清空日志','', 3, NULL, 1),
+-- ('dept', 'system', '[0],[system],', '部门管理','',2, NULL,1),
+-- ('dept_add', 'dept', '[0],[system],[dept],', '添加部门','',3, NULL, 1),
+-- ('dept_update', 'dept', '[0],[system],[dept],', '修改部门','',3, NULL, 1),
+-- ('dept_delete', 'dept', '[0],[system],[dept],', '删除部门', '', 3,NULL, 1);
 
+
+DROP TABLE IF EXISTS `relation`;
+CREATE TABLE IF NOT EXISTS `relation` (
+  `id` int(11) NOT NULL AUTO_INCREMENT COMMENT '主键',
+  `menuid` int(11) DEFAULT NULL COMMENT '菜单id',
+  `roleid` int(11) DEFAULT NULL COMMENT '角色id',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COMMENT='角色和菜单关联表';
