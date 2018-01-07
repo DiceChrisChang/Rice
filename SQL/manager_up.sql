@@ -1,14 +1,3 @@
- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
- -- -- password's MD5 number
- -- -- 上传数据之后都需要进行此操作
- -- -- 应该放入 PHP 代码中
- -- -- UPDATE user SET salt = MD5(password);
- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
-
-
-
-
-
 
 -- 创建 dept table 
 -- DROP TABLE IF EXISTS `dept`;
@@ -101,8 +90,6 @@
 --   PRIMARY KEY (`id`)
 -- ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='登录记录';
 
-
-
 -- 向 login-in table 插入数据 
 -- INSERT INTO `login_log` (`logname`, `userid`, `succeed`, `message`, `ip`) VALUES
 -- ('退出日志', 1, '成功', NULL, '127.0.0.1'),
@@ -128,3 +115,67 @@
 --   `tips` varchar(255) DEFAULT NULL COMMENT '提示',
 --   PRIMARY KEY (`id`)
 -- ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='字典表';
+
+-- 向 table
+-- INSERT INTO `dict` ( `pid`, `name`, `tips`) VALUES
+-- (0, '账号状态', NULL),
+-- (1, '启用', NULL),
+-- (1, '冻结', NULL),
+-- (0, '菜单状态', NULL),
+-- (3, '启用', NULL),
+-- (3, '不启用', NULL);
+
+
+
+-- 创建 menu table 
+-- DROP TABLE IF EXISTS `menu`;
+-- CREATE TABLE IF NOT EXISTS `menu` (
+--   `id` int(65) NOT NULL AUTO_INCREMENT COMMENT '主键id',
+--   `code` varchar(255) DEFAULT NULL COMMENT '菜单编号',
+--   `pcode` varchar(255) DEFAULT NULL COMMENT '菜单父编号',
+--   `pcodes` varchar(255) DEFAULT NULL COMMENT '当前菜单的所有父菜单编号',
+--   `name` varchar(255) DEFAULT NULL COMMENT '菜单名称',
+--   `url` varchar(255) DEFAULT NULL COMMENT 'url地址',
+--   `levels` int(65) DEFAULT NULL COMMENT '菜单层级',
+--   `tips` varchar(255) DEFAULT NULL COMMENT '备注',
+--   `status` int(65) DEFAULT NULL COMMENT '菜单状态 :  1:启用   0:不启用',
+--   PRIMARY KEY (`id`)
+-- ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COMMENT='菜单表';
+
+INSERT INTO 'menu'('code','pcode','pcodes','name','url','levels','tips','status') VALUES
+('system','0','[0],','系统管理'，'',1,NULL,1),
+
+('mgr','system','[0],[system],','用户管理','',2,NULL,1),
+('mgr_add',' mgr','[0],[system],[mgr],','添加用户','',3,NULL,1),
+('mgr_setRole',' mgr','[0],[system],[mgr],','分配角色给用户','',3,NULL,1),
+('mgr_edit',' mgr','[0],[system],[mgr],','修改用户','',3,NULL,1),
+('mgr_delete',' mgr','[0],[system],[mgr],','删除用户','',3,NULL,1),
+('mgr_freeze',' mgr','[0],[system],[mgr],','冻结用户','',3,NULL,1),
+('mgr_unfreeze',' mgr','[0],[system],[mgr],','解除用户冻结','',3,NULL,1),
+('mgr_add',' mgr','[0],[system],[mgr],','添加用户','',3,NULL,1),
+
+('role', 'system', '[0],[system],', '角色管理','',2,NULL,1),
+('role_add', 'role', '[0],[system],[role],', '添加角色','',3,NULL,1),
+('role_edit', 'role', '[0],[system],[role],', '修改角色','',3,NULL,1),
+('role_delete', 'role', '[0],[system],[role],', '删除角色','',3,NULL,1),
+('role_setAuthority', 'role', '[0],[system],[role],', '配置权限','',3,NULL,1),
+
+('menu', 'system', '[0],[system],', '菜单管理','',2,NULL,1),
+('menu_add', 'menu', '[0],[system],[menu],', '添加菜单','',3,NULL,1),
+('menu_edit', 'menu', '[0],[system],[menu],', '修改菜单','',3,NULL,1),
+('menu_delete', 'menu', '[0],[system],[menu],', '删除菜单','',3,NULL,1),
+
+('log', 'system', '[0],[system],', '业务日志','', 2, NULL, 1),
+('log_clean', 'log', '[0],[system],[log],', '清空日志','', 3, NULL, 1),
+
+('dept', 'system', '[0],[system],', '部门管理','',2, NULL,1),
+('dept_add', 'dept', '[0],[system],[dept],', '添加部门','',3, NULL, 1),
+('dept_update', 'dept', '[0],[system],[dept],', '修改部门','',3, NULL, 1),
+('dept_delete', 'dept', '[0],[system],[dept],', '删除部门', '', 3,NULL, 1),
+
+
+
+('menu_add', 'menu', '[0],[system],[menu],', '添加菜单','',3,NULL,1),
+('dict_add', 'dict', '[0],[system],[dict],', '添加字典', NULL, '/dict/add', 1, 3, 0, NULL, 1, NULL),
+('dict_update', 'dict', '[0],[system],[dict],', '修改字典', NULL, '/dict/update', 1, 3, 0, NULL, 1, NULL),
+('dict_delete', 'dict', '[0],[system],[dict],', '删除字典', NULL, '/dict/delete', 1, 3, 0, NULL, 1, NULL),
