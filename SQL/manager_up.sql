@@ -170,10 +170,112 @@
 -- ('dept_delete', 'dept', '[0],[system],[dept],', '删除部门', '', 3,NULL, 1);
 
 
-DROP TABLE IF EXISTS `relation`;
-CREATE TABLE IF NOT EXISTS `relation` (
-  `id` int(11) NOT NULL AUTO_INCREMENT COMMENT '主键',
-  `menuid` int(11) DEFAULT NULL COMMENT '菜单id',
-  `roleid` int(11) DEFAULT NULL COMMENT '角色id',
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COMMENT='角色和菜单关联表';
+-- 创建 relation table
+-- DROP TABLE IF EXISTS `relation`;
+-- CREATE TABLE IF NOT EXISTS `relation` (
+--   `id` int(11) NOT NULL AUTO_INCREMENT COMMENT '主键',
+--   `menuid` int(11) DEFAULT NULL COMMENT '菜单id',
+--   `roleid` int(11) DEFAULT NULL COMMENT '角色id',
+--   PRIMARY KEY (`id`)
+-- ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COMMENT='角色和菜单关联表';
+
+
+-- -- 订单部管理员的联系
+-- -- 订单部操作员的联系
+-- -- 仓储部管理员的联系
+-- -- 仓储部操作员的联系
+-- 超级管理员的权限
+-- 管理部管理员的联系
+
+-- INSERT INTO `relation`(`menuid`,`roleid`)VALUES
+-- (1,1),
+-- (2,1),
+-- (3,1),
+-- (4,1),
+-- (5,1),
+-- (6,1),
+-- (7,1),
+-- (8,1),
+-- (9,1),
+-- (10,1),
+-- (11,1),
+-- (12,1),
+-- (13,1),
+-- (14,1),
+-- (15,1),
+-- (16,1),
+-- (17,1),
+-- (18,1),
+-- (19,1),
+-- (20,1),
+-- (21,1),
+-- (22,1),
+-- (23,1),
+-- (24,1),
+-- (1,6),
+-- (10,6),
+-- (11,6),
+-- (12,6),
+-- (13,6),
+-- (14,6),
+-- (15,6),
+-- (16,6),
+-- (17,6),
+-- (18,6),
+-- (19,6),
+-- (20,6);
+
+-- 创建 address reseller table
+-- DROP TABLE IF EXISTS `address`;
+-- CREATE TABLE IF NOT EXISTS `address` (
+--   `id` int(11) NOT NULL COMMENT '分销商地址id',
+--   `contacter` varchar(255) CHARACTER SET utf8 NOT NULL COMMENT '联系人',
+--   `contact_number` int(11) NOT NULL COMMENT '联系人地址',
+--   `address` varchar(255) CHARACTER SET utf8 NOT NULL COMMENT '地址',
+--    `create_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '分销商创建时间',
+--    `changed_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT '分销商修改时间',
+--   PRIMARY KEY (`id`)
+-- ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='分销商地址表'  AUTO_INCREMENT=1 ;
+-- DROP TABLE IF EXISTS `reseller`;
+-- CREATE TABLE IF NOT EXISTS `reseller` (
+--   `id` int(11) NOT NULL COMMENT '分销商id',
+--   `name` varchar(255) CHARACTER SET utf8 NOT NULL COMMENT '名称',
+--   `area` varchar(255) CHARACTER SET utf8 NOT NULL COMMENT '区域',
+--   `director` varchar(255) CHARACTER SET utf8 NOT NULL COMMENT '负责人',
+--   `company_number` int(11) NOT NULL COMMENT '公司电话',
+--   `director_number` int(11) NOT NULL COMMENT '负责人电话',
+--   `create_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '地址创建时间',
+--   `changed_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT '地址修改时间',
+--   `address_id` int(11) NOT NULL COMMENT '分销商地址id',
+--   PRIMARY KEY (`id`)
+-- ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='分销商表' AUTO_INCREMENT=1;
+
+-- INSERT INTO `reseller`(`id`,`name`,`area`,`director`,`company_number`,`director_number`,`address_id`)VALUES
+-- ('1','一级分销商A','大庆','张强',NULL,13410011001,1 ),
+-- ('2','一级分销商A','大庆','张强',NULL,13410011001,2 ),
+-- ('3','一级分销商A','大庆','张强',NULL,13410011001,3 ),
+-- ('4','一级分销商B','武汉','李毅',NULL,13410011002,4 ),
+-- ('5','一级分销商B','武汉','李毅',NULL,13410011002,5 ),
+-- ('6','一级分销商C','合肥','张伦',NULL,13410011003,6 ),
+-- ('7','一级分销商C','合肥','张伦',NULL,13410011003,7 ),
+-- ('8','一级分销商D','菏泽','李文',NULL,13410011004,8 ),
+-- ('9','一级分销商D','菏泽','李文',NULL,13410011004,9 ),
+-- ('10','一级分销商E','青岛','李青',NULL,13410011005,10 ),
+-- ('11','一级分销商F','长沙','李文新',NULL,13410011006,11 ),
+-- ('12','一级分销商G','沈阳','张文理',NULL,13410011007,12 ),
+-- ('13','二级分销商A','哈尔滨','魏理',NULL,13410011008,13 ),
+-- ('14','二级分销商B','唐山','何文欣',NULL,13410011009,14 ),
+-- ('15','二级分销商C','秦皇岛','萧景琰',NULL,13410011010,15 ),
+-- ('16','二级分销商D','石家庄','萧庭生',NULL,13410011011,16 ),
+-- ('17','二级分销商E','金华','萧警亭',NULL,13410011012,17 ),
+-- ('18','二级分销商F','保定','萧靖宇',NULL,13410011013,18 ),
+-- ('19','三级分销商A','郑州','萧景桓',NULL,13410011014,19 ),
+-- ('20','三级分销商B','宜昌','萧平静',NULL,13410011015,20 ),
+-- ('21','三级分销商C','天津','萧平掌',NULL,13410011016,21 ),
+-- ('22','三级分销商D','厦门','林殊',NULL,13410011017,22 );
+
+INSERT INTO `address`(`id`,`contacter`,`contact_number`,`address`)VALUES
+()
+
+
+
