@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Generation Time: 2018-01-08 11:12:23
+-- Generation Time: 2018-01-08 14:01:59
 -- 服务器版本： 5.7.19
 -- PHP Version: 5.6.31
 
@@ -231,14 +231,11 @@ CREATE TABLE IF NOT EXISTS `order` (
   `delivery_company` int(11) NOT NULL COMMENT '物流公司名称',
   `delivery_cost` int(11) NOT NULL COMMENT '运费',
   `order_option` int(11) NOT NULL COMMENT '订单类型',
-  `create_time` timestamp NOT NULL COMMENT '创建时间',
-  `modified_time` timestamp NOT NULL COMMENT '修改时间',
+  `create_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '订单创建时间',
+  `changed_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT '订单修改时间',
   `pay_status` int(11) NOT NULL COMMENT '付款状态',
-  PRIMARY KEY (`id`),
-  KEY `product_id` (`product_id`),
-  KEY `reseller_id` (`reseller_id`),
-  KEY `address_id` (`address_id`)
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='订单表';
 
 -- --------------------------------------------------------
 
@@ -251,7 +248,7 @@ CREATE TABLE IF NOT EXISTS `package` (
   `id` int(11) NOT NULL COMMENT 'id',
   `type` varchar(30) NOT NULL COMMENT '包装类型',
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='包装表';
 
 -- --------------------------------------------------------
 
@@ -269,12 +266,11 @@ CREATE TABLE IF NOT EXISTS `product` (
   `first_price` int(11) NOT NULL COMMENT '一级分销商价格',
   `second_price` int(11) NOT NULL COMMENT '二级分销商价格',
   `size` int(11) NOT NULL COMMENT '规格',
-  `create_time` timestamp NOT NULL COMMENT '创建时间',
-  `modify_time` timestamp NOT NULL COMMENT '修改时间',
+  `create_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '产品创建时间',
+  `changed_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT '产品修改时间',
   `package_id` int(11) NOT NULL COMMENT '包装id',
-  PRIMARY KEY (`id`),
-  KEY `package_id` (`package_id`)
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='产品表';
 
 -- --------------------------------------------------------
 
@@ -291,11 +287,10 @@ CREATE TABLE IF NOT EXISTS `product_inventory` (
   `in_out_flag` int(11) NOT NULL COMMENT '出入库区分标识',
   `user_id` int(11) NOT NULL COMMENT '管理员',
   `in_out_transaction_code` varchar(45) NOT NULL COMMENT '交易码',
-  `modified_time` timestamp NOT NULL COMMENT '修改时间',
-  PRIMARY KEY (`id`),
-  KEY `product_id` (`product_id`),
-  KEY `user_id` (`user_id`)
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+  `create_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '入库创建时间',
+  `changed_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT '库存修改时间',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='库存表';
 
 -- --------------------------------------------------------
 

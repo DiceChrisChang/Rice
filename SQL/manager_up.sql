@@ -298,5 +298,57 @@
 -- (21,'萧平掌','024-888890020','南营门街道宝鸡西道10号'),
 -- (22,'林殊','024-888890021','曾厝垵北二路西50米');
 
-
+DROP TABLE IF EXISTS `order`;
+CREATE TABLE IF NOT EXISTS `order` (
+  `id` int(11) NOT NULL COMMENT '订单id',
+  `product_id` int(11) NOT NULL COMMENT '产品编号',
+  `price` int(11) NOT NULL COMMENT '单价',
+  `count` int(20) NOT NULL COMMENT '数量',
+  `reseller_id` int(11) NOT NULL COMMENT '分销商ID',
+  `address_id` int(11) NOT NULL COMMENT '分销商地址ID',
+  `delivery_time` datetime NOT NULL COMMENT '出货时间',
+  `order_status` int(11) NOT NULL COMMENT '订单状态',
+  `delivery_number` int(11) NOT NULL COMMENT '物流单号',
+  `delivery_company` int(11) NOT NULL COMMENT '物流公司名称',
+  `delivery_cost` int(11) NOT NULL COMMENT '运费',
+  `order_option` int(11) NOT NULL COMMENT '订单类型',
+  `create_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '订单创建时间',
+  `changed_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT '订单修改时间',
+  `pay_status` int(11) NOT NULL COMMENT '付款状态',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='订单表';
+DROP TABLE IF EXISTS `package`;
+CREATE TABLE IF NOT EXISTS `package` (
+  `id` int(11) NOT NULL COMMENT 'id',
+  `type` varchar(30) NOT NULL COMMENT '包装类型',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='包装表';
+DROP TABLE IF EXISTS `product`;
+CREATE TABLE IF NOT EXISTS `product` (
+  `id` int(11) NOT NULL COMMENT '主键',
+  `name` varchar(25) NOT NULL COMMENT '名称',
+  `product_code` varchar(25) NOT NULL COMMENT '产品编码',
+  `min_inventory` int(11) NOT NULL COMMENT '库存预警阀值',
+  `cost_price` int(11) NOT NULL COMMENT '成本价格',
+  `first_price` int(11) NOT NULL COMMENT '一级分销商价格',
+  `second_price` int(11) NOT NULL COMMENT '二级分销商价格',
+  `size` int(11) NOT NULL COMMENT '规格',
+  `create_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '产品创建时间',
+  `changed_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT '产品修改时间',
+  `package_id` int(11) NOT NULL COMMENT '包装id',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='产品表';
+DROP TABLE IF EXISTS `product_inventory`;
+CREATE TABLE IF NOT EXISTS `product_inventory` (
+  `id` int(11) NOT NULL,
+  `product_id` int(11) NOT NULL,
+  `in_out_quantity` int(11) NOT NULL COMMENT '产品出入库量',
+  `in_time` timestamp NOT NULL COMMENT '产品入库时间',
+  `in_out_flag` int(11) NOT NULL COMMENT '出入库区分标识',
+  `user_id` int(11) NOT NULL COMMENT '管理员',
+  `in_out_transaction_code` varchar(45) NOT NULL COMMENT '交易码',
+  `create_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '入库创建时间',
+  `changed_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT '库存修改时间',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='库存表';
 
