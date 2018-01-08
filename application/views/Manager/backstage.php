@@ -77,6 +77,11 @@ body {
 
   <body>
 
+    <?php echo validation_errors(); ?>
+    <!-- 将会返回验证器返回的所有错误信息。如果没有错误信息，它将返回空字符串 
+    -->
+    <?php echo form_open('form'); ?>
+
     <div class="container">
 
       <form class="form-signin">
