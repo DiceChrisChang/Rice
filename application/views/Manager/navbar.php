@@ -14,10 +14,10 @@
         <!-- should come from rice table menu -->
         <li >
           <a href="#" >
-          
+           <?php echo $navbarFirst; ?>
           </a>
        </li>
-        <li ><a href="#" >经销商</a></li>
+        <li ><a href="#" >经销商管理</a></li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <!--
