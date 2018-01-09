@@ -95,7 +95,7 @@ body {
          <?php echo "<strong>Warning!</strong> ".validation_errors(); ?>
       </div>
       <?php echo form_open('Manager','class="form-signin"'); ?>
-      <form class="form-signin">
+      <form class="form-signin" method="post" action="http://localhost/rice/index.php/manager">
         <h2 class="form-signin-heading">Magnet</h2>
         <P>客户管理</P>
         <label for="inputEmail" class="sr-only">Email address</label>
