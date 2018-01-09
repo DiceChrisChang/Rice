@@ -65,17 +65,34 @@ class Manager extends CI_Controller {
             // $data 准备向view传入参数
             $data['navbarFirst'] = $navbarFirst;
             // sidebar 数据导入
-            $sidebar = $this->db->query("SELECT * FROM menu WHERE menu.levels = 2");
-			$data['sideFirst'] = $sidebar->result_array();
+            $sidebar = $this->db->query("SELECT * FROM menu WHERE levels = 2");
+			$data['side0'] = $sidebar->row_array(0);
+			$data['side1'] = $sidebar->row_array(1);
+			$data['side2'] = $sidebar->row_array(2);
+			$data['side3'] = $sidebar->row_array(3);
+			$data['side4'] = $sidebar->row_array(4);
 
-			$second = $this->db->query("SELECT * FROM menu WHERE menu.levels = 3");
-			$data['second'] = $second->result_array();
-            // var_dump($data['second']);
-            
+
+			$mgr = $this->db->query("SELECT * FROM menu WHERE levels = 3 and pcodes = '[0],[system],[mgr],'");
+			$data['mgr'] = $mgr->result_array();
+
+
+			$role = $this->db->query("SELECT * FROM menu WHERE levels = 3 and pcode = 'role'");
+			$data['role'] = $role->result_array();
+
+            $menu = $this->db->query("SELECT * FROM menu WHERE levels = 3 and pcode = 'menu'");
+			$data['menu'] = $menu->result_array();
+
+			$log = $this->db->query("SELECT * FROM menu WHERE levels = 3 and pcode = 'log'");
+			$data['log'] = $log->result_array();
+
+			$dept = $this->db->query("SELECT * FROM menu WHERE levels = 3 and pcode = 'dept'");
+			$data['dept'] = $dept->result_array();
+
             // head
 		    $this->load->view('head.php');
 			// body
-            // $this->load->view('Manager/navbar.php',$data);
+            $this->load->view('Manager/navbar.php',$data);
             // 侧面手风琴菜单栏
             $this->load->view('Manager/sidebar.php',$data);
             $this->load->view('Manager/operate.php');

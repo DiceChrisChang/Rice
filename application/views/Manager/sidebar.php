@@ -8,17 +8,16 @@
 			<h4 class="panel-title ">
 				<a data-toggle="collapse" data-parent="#accordion" 
 				   href="#collapse1">
-					库存
+					<?php echo $side0['name'] ; ?>
 				</a>
 			</h4>
 		</div>
 		<div id="collapse1" class="panel-collapse collapse in">
 			<div class="panel-body">
 				<ul class="nav nav-sidebar">
-					<li><a href="#">产品入库</a></li>
-					<li><a href="#">产品库存</a></li>
-					<li><a href="#">包装材料入库</a></li>
-					<li><a href="#">包装材料库存</a></li>
+					<?php foreach ($mgr as $value):?>
+					<li><a href="#"><?=$value['name']?></a></li>
+					<?php endforeach;?>
 				</ul>
 			</div>
 		</div>
@@ -28,16 +27,16 @@
 			<h4 class="panel-title ">
 				<a data-toggle="collapse" data-parent="#accordion" 
 				   href="#collapse2">
-					供应商列表
+					<?php echo $side1['name'] ; ?>
 				</a>
 			</h4>
 		</div>
 		<div id="collapse2" class="panel-collapse collapse in">
 			<div class="panel-body">
 				<ul class="nav nav-sidebar">
-					<li><a href="#">供应商信息</a></li>
-					<li><a href="#">供应商添加</a></li>
-					<li><a href="#">供应商修改</a></li>
+					<?php foreach ($role as $value):?>
+					<li><a href="#"><?=$value['name']?></a></li>
+					<?php endforeach;?>
 				</ul>
 			</div>
 		</div>
@@ -47,17 +46,56 @@
 			<h4 class="panel-title ">
 				<a data-toggle="collapse" data-parent="#accordion" 
 				   href="#collapse3">
-				   产品列表
+				   <?php echo $side2['name'] ; ?>
 				</a>
 			</h4>
 		</div>
 		<div id="collapse3" class="panel-collapse collapse in">
 			<div class="panel-body">
 				<ul class="nav nav-sidebar">
-					<li><a href="#">产品信息</a></li>
-					<li><a href="#">添加产品</a></li>
-					<li><a href="#">修改产品</a></li>
-					<li><a href="#">删除产品</a></li>
+					<?php foreach ($menu as $value):?>
+					<li><a href="#"><?=$value['name']?></a></li>
+					<?php endforeach;?>
+				</ul>
+			</div>
+		</div>
+	</div>
+
+
+	<div class="panel panel-primary  side-panel">
+		<div class="panel-heading">
+			<h4 class="panel-title ">
+				<a data-toggle="collapse" data-parent="#accordion" 
+				   href="#collapse4">
+				   <?php echo $side3['name'] ; ?>
+				</a>
+			</h4>
+		</div>
+		<div id="collapse4" class="panel-collapse collapse in">
+			<div class="panel-body">
+				<ul class="nav nav-sidebar">
+					<?php foreach ($log as $value):?>
+					<li><a href="#"><?=$value['name']?></a></li>
+					<?php endforeach;?>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div class="panel panel-primary  side-panel">
+		<div class="panel-heading">
+			<h4 class="panel-title ">
+				<a data-toggle="collapse" data-parent="#accordion" 
+				   href="#collapse5">
+				   <?php echo $side4['name'] ; ?>
+				</a>
+			</h4>
+		</div>
+		<div id="collapse5" class="panel-collapse collapse in">
+			<div class="panel-body">
+				<ul class="nav nav-sidebar">
+					<?php foreach ($dept as $value):?>
+					<li><a href="#"><?=$value['name']?></a></li>
+					<?php endforeach;?>
 				</ul>
 			</div>
 		</div>
