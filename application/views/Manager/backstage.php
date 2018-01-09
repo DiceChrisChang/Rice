@@ -77,32 +77,63 @@ body {
 
   <body>
 
-    <?php echo validation_errors(); ?>
-    <!-- 将会返回验证器返回的所有错误信息。如果没有错误信息，它将返回空字符串 
-    -->
-    <?php echo form_open('form'); ?>
+        
+    
+    <!-- 
+      将会返回验证器返回的所有错误信息。如果没有错误信息，它将返回空字符串 
 
+    --> 
+    
+    
     <div class="container">
+      
 
+      <div class="alert alert-danger alert-dismissible" role="alert" id="alertHide">
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+         <?php echo "<strong>Warning!</strong> ".validation_errors(); ?>
+      </div>
+      <?php echo form_open('Manager','class="form-signin"'); ?>
       <form class="form-signin">
         <h2 class="form-signin-heading">Magnet</h2>
         <P>客户管理</P>
         <label for="inputEmail" class="sr-only">Email address</label>
-        <input type="email" id="inputEmail" class="form-control" placeholder="登录账号" required autofocus>
-        <label for="inputPassword" class="sr-only">Email address</label>
-        <input type="password" id="inputPassword" class="form-control" placeholder="密码" required>
+        <!-- 
+          type = email 存在验证不能作为账号类型
+          value 内的 set_value()函数保证其实输入错误也会保留上一次输入的信息
+        -->
+        <input type="text" id="inputEmail" class="form-control" placeholder="登录账号" required autofocus name="username" value="<?php echo set_value('username'); ?>" >
+        <label for="inputPassword" class="sr-only">Password</label>
+        <input type="password" id="inputPassword" class="form-control" placeholder="密码" required name="password" value="<?php echo set_value('password'); ?>" >
         <div class="checkbox">
           <label>
-            <input type="checkbox" value="remember-me"> Remember me
+            <input type="checkbox" value="remember-me" disabled="disabled" > Remember me
           </label>
         </div>
-        <button class="btn btn-lg btn-primary btn-block" type="submit">登录</button>
-      </form>
+        <button class="btn btn-lg btn-primary btn-block" type="submit" value="Submit" id="logSubmit">登录</button>
+      </form><!-- form-signin -->
 
     </div> <!-- /container -->
 
-
+  <!--jQuery 引入-->
+  <script src="https://cdn.bootcss.com/jquery/3.2.1/core.js"></script>
+  <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.js"></script>
+  <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+  
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
+    <script type="text/javascript">
+
+      // 登录尚未成功时弹出的警告 可以主动操作关闭
+      $('.close').click(function(){
+        $('#alertHide').alert('close');
+      });
+      // 操作输入框可以自动关闭警告框
+      $(":input").focus(function(){
+        $('#alertHide').hide();        
+      })
+      
+    </script>
   </body>
 </html>

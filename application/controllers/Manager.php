@@ -34,24 +34,16 @@ class Manager extends CI_Controller {
 		*/ 
 		//$content = index.php;
 
-
-
-
-
-
         $this->load->helper(array('form', 'url'));
-
         $this->load->library('form_validation');
 
 
-
-        $this->form_validation->set_rules('username', 'Username', 'required');
+        // 用户账号输入规则大于等于五小于等于二十
+        $this->form_validation->set_rules('username', 'Username', 'trim|required|min_length[5]|max_length[20]');
+        
         $this->form_validation->set_rules('password', 'Password', 'required',
             array('required' => 'You must provide a %s.')
         );
-        $this->form_validation->set_rules('passconf', 'Password Confirmation', 'required');
-        $this->form_validation->set_rules('email', 'Email', 'required');
-
 
 
         if ($this->form_validation->run() == FALSE)
@@ -60,7 +52,7 @@ class Manager extends CI_Controller {
         }
         else
         {
-            $this->load->view('formsuccess');
+            $this->load->view('formsuccess.php');
         }
 
 

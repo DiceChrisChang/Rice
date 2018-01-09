@@ -11,7 +11,7 @@
 
     */
 
-
+    $('#identifier').alert();
     // log-in & sign-out 不能同时好使 需要判断状态
     if (false) {
       $("#sign-out").click(function(){
