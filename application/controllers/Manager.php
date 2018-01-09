@@ -40,7 +40,7 @@ class Manager extends CI_Controller {
 
         // 用户账号输入规则大于等于五小于等于二十
         $this->form_validation->set_rules('username', 'Username', 'trim|required|min_length[5]|max_length[20]');
-        
+
         $this->form_validation->set_rules('password', 'Password', 'required',
             array('required' => 'You must provide a %s.')
         );
@@ -52,7 +52,22 @@ class Manager extends CI_Controller {
         }
         else
         {
-            $this->load->view('formsuccess.php');
+            // head
+		    $this->load->view('head.php');
+			// body
+            $this->load->view('Manager/navbar.php');
+            // 侧面手风琴菜单栏
+            $this->load->view('Manager/sidebar.php');
+            $this->load->view('Manager/operate.php');
+            $this->load->view('Manager/table_data.php');
+            $this->load->view('Manager/page.php');
+            $this->load->view('foot.php');
+		    // modal
+		    $this->load->view('modal.php');
+		    // tail
+		    $this->load->view('jquery_tail.php');
+		    // js
+		    $this->load->view('login.js');
         }
 
 

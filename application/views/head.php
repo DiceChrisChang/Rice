@@ -92,6 +92,7 @@
         */
         .navbar{
             margin-bottom: 0px;
+            height: 50px;
         }
         /*
         path-navigation
@@ -142,6 +143,14 @@
         }
         .delCheck{
             padding-left: 5px;
+        }
+        .specialA{
+            padding-left: 0px;
+            padding-right: 2px;
+        }
+        #Manager{
+            margin-top :3px;  
+
         }
 
     </style>
