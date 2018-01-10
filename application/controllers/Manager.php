@@ -52,13 +52,13 @@ class Manager extends CI_Controller {
         }
         else
         {
-
             $this->load->database();
 		    // 装载数据库操作类
 		    // var_dump($this->db);
 		    // 装载成功 默认属性名是db
-
-            
+            // head
+		    $this->load->view('head.php');
+			// body
             ////////////////////////////////////////////// navbar 获取动态数据
             $query = $this->db->query("SELECT * FROM menu WHERE menu.levels = 1");
             // var_dump($query);
@@ -68,7 +68,7 @@ class Manager extends CI_Controller {
             // $data 准备向view传入参数
             $data['navbarFirst'] = $navbarFirst;
             ////////////////////////////////////////////// navbar close
-
+            $this->load->view('Manager/navbar.php',$data);
             ////////////////////////////////////// sidebar 系统管理 动态数据导入
             $sidebar = $this->db->query("SELECT * FROM menu WHERE levels = 2");
 			$data['side0'] = $sidebar->row_array(0);
@@ -93,12 +93,9 @@ class Manager extends CI_Controller {
 			$data['dept'] = $dept->result_array();
 			//////////////////////////////////////////////////// sidebar close
 
-            // head
-		    $this->load->view('head.php');
-			// body
-            $this->load->view('Manager/navbar.php',$data);
             // 侧面手风琴菜单栏
             $this->load->view('Manager/sidebar.php',$data);
+
 
             /////////////////////////////////////////////////// operate 动态数据
             // role 查询操作的下拉选择单
@@ -114,8 +111,6 @@ class Manager extends CI_Controller {
 			dept ');
 			$data['dept_fullname'] = $dept_fullname->result_array();
 			/////////////////////////////////////////////////////// operate close
-
-
             $this->load->view('Manager/operate.php',$data);
 
 
@@ -134,11 +129,8 @@ class Manager extends CI_Controller {
 			$data['user_list'] = $user_list->result_array();
 			// var_dump($data['user_list']);
 			//////////////////////////////////////////////////////// operate close
-
-
-
-
             $this->load->view('Manager/table_data.php',$data);
+
             $this->load->view('Manager/page.php');
             $this->load->view('foot.php');
 		    // modal
@@ -147,18 +139,20 @@ class Manager extends CI_Controller {
 		    $this->load->view('jquery_tail.php');
 		    // js
 		    $this->load->view('login.js');
+  
+        }
+    }
+    public function reseller_load(){
 
-
-
-
-
-		    
-          }}
-    public function add_user(){
             $this->load->database();
 		    // 装载数据库操作类
 		    // var_dump($this->db);
 		    // 装载成功 默认属性名是db
+
+            // head
+		    $this->load->view('head.php');
+			// body
+            ////////////////////////////////////////////// navbar 获取动态数据
             $query = $this->db->query("SELECT * FROM menu WHERE menu.levels = 1");
             // var_dump($query);
             // $query 返回值是对象
@@ -166,7 +160,88 @@ class Manager extends CI_Controller {
             $navbarFirst =  $query->row()->name;
             // $data 准备向view传入参数
             $data['navbarFirst'] = $navbarFirst;
-            // sidebar 数据导入
+            ////////////////////////////////////////////// navbar close
+
+            // $this->load->view('Manager/navbar.php',$data);
+
+
+            // 侧面手风琴菜单栏
+            $this->load->view('Reseller/sidebar.php',$data);
+
+
+            /////////////////////////////////////////////////// operate 动态数据
+            // role 查询操作的下拉选择单
+            $role_tips = $this->db->query('SELECT
+			role.tips
+			FROM
+			role');
+			$data['role_tips'] = $role_tips->result_array();
+
+			$dept_fullname = $this->db->query('SELECT
+			dept.fullname
+			FROM
+			dept ');
+			$data['dept_fullname'] = $dept_fullname->result_array();
+			/////////////////////////////////////////////////////// operate close
+            $this->load->view('Manager/operate.php',$data);
+
+
+            ////////////////////////////////////////////////// table_data 动态数据
+            $reseller_list = $this->db->query('SELECT
+			reseller.id,
+			reseller.`name`,
+			reseller.area,
+			reseller.director,
+			reseller.changed_time,
+			reseller.director_number
+			FROM
+			reseller');
+			$data['reseller_list'] = $reseller_list->result_array();
+			// var_dump($data['reseller_list']);
+			//////////////////////////////////////////////////////// operate close
+            $this->load->view('Reseller/table_data.php',$data);
+
+            $this->load->view('Reseller/page.php');
+            $this->load->view('foot.php');
+		    // modal
+		    $this->load->view('modal.php');
+		    // tail
+		    $this->load->view('jquery_tail.php');
+		    // js
+		    $this->load->view('login.js');
+
+		    // 分页
+			// $this->load->library('pagination');
+			
+			// $config['base_url'] = 'http://localhost/rice/index.php/manager/reseller_load';
+			// $config['total_rows'] = 22;
+			// $config['per_page'] = 10;
+			
+			// $this->pagination->initialize($config);
+			
+			// echo $this->pagination->create_links();
+
+
+    }  
+    public function system_load(){
+            $this->load->database();
+		    // 装载数据库操作类
+		    // var_dump($this->db);
+		    // 装载成功 默认属性名是db
+            // head
+		    $this->load->view('head.php');
+			// body
+            ////////////////////////////////////////////// navbar 获取动态数据
+            $query = $this->db->query("SELECT * FROM menu WHERE menu.levels = 1");
+            // var_dump($query);
+            // $query 返回值是对象
+            
+            $navbarFirst =  $query->row()->name;
+            // $data 准备向view传入参数
+            $data['navbarFirst'] = $navbarFirst;
+            ////////////////////////////////////////////// navbar close
+            $this->load->view('Manager/navbar.php',$data);
+            ////////////////////////////////////// sidebar 系统管理 动态数据导入
             $sidebar = $this->db->query("SELECT * FROM menu WHERE levels = 2");
 			$data['side0'] = $sidebar->row_array(0);
 			$data['side1'] = $sidebar->row_array(1);
@@ -174,10 +249,8 @@ class Manager extends CI_Controller {
 			$data['side3'] = $sidebar->row_array(3);
 			$data['side4'] = $sidebar->row_array(4);
 
-
 			$mgr = $this->db->query("SELECT * FROM menu WHERE levels = 3 and pcodes = '[0],[system],[mgr],'");
 			$data['mgr'] = $mgr->result_array();
-
 
 			$role = $this->db->query("SELECT * FROM menu WHERE levels = 3 and pcode = 'role'");
 			$data['role'] = $role->result_array();
@@ -190,32 +263,30 @@ class Manager extends CI_Controller {
 
 			$dept = $this->db->query("SELECT * FROM menu WHERE levels = 3 and pcode = 'dept'");
 			$data['dept'] = $dept->result_array();
+			//////////////////////////////////////////////////// sidebar close
 
-            // head
-		    $this->load->view('head.php');
-			// body
-            $this->load->view('Manager/navbar.php',$data);
             // 侧面手风琴菜单栏
             $this->load->view('Manager/sidebar.php',$data);
 
+
+            /////////////////////////////////////////////////// operate 动态数据
             // role 查询操作的下拉选择单
             $role_tips = $this->db->query('SELECT
 			role.tips
 			FROM
 			role');
 			$data['role_tips'] = $role_tips->result_array();
-			//
+
 			$dept_fullname = $this->db->query('SELECT
 			dept.fullname
 			FROM
 			dept ');
 			$data['dept_fullname'] = $dept_fullname->result_array();
-
-
+			/////////////////////////////////////////////////////// operate close
             $this->load->view('Manager/operate.php',$data);
 
 
-
+            ////////////////////////////////////////////////// table_data 动态数据
             $user_list = $this->db->query('SELECT
 			`user`.id,
 			`user`.`name`,
@@ -229,11 +300,9 @@ class Manager extends CI_Controller {
             INNER JOIN dept ON dept.id = `user`.deptid');
 			$data['user_list'] = $user_list->result_array();
 			// var_dump($data['user_list']);
-
-
-
-
+			//////////////////////////////////////////////////////// operate close
             $this->load->view('Manager/table_data.php',$data);
+
             $this->load->view('Manager/page.php');
             $this->load->view('foot.php');
 		    // modal
@@ -242,6 +311,6 @@ class Manager extends CI_Controller {
 		    $this->load->view('jquery_tail.php');
 		    // js
 		    $this->load->view('login.js');
-    }      
+    }    
 
 }

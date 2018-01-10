@@ -13,7 +13,7 @@
       <ul class="nav navbar-nav navbar-left">
         <!-- should come from rice table menu -->
         <li >
-          <a href="http://localhost/rice/index.php/manager/system_load" >
+          <a href="#" >
            <?php echo $navbarFirst; ?>
           </a>
        </li>
