@@ -63,9 +63,12 @@
     $(function () { $('#collapse3').collapse({toggle: false})});
     // $(function () { $('#collapse2').collapse({toggle: false})});
     // $(function () { $('#collapse1').collapse({toggle: false})});
-    $(function () { $('#collapse3').collapse('show')});
-    $(function () { $('#collapse2').collapse('show')});
     $(function () { $('#collapse1').collapse('show')});
+    $(function () { $('#collapse2').collapse('hide')});
+    $(function () { $('#collapse2').collapse('hide')});
+    $(function () { $('#collapse3').collapse('hide')});
+    $(function () { $('#collapse4').collapse('hide')});
+    $(function () { $('#collapse5').collapse('hide')});
     // $(function () { $('#collapse2').collapse('toggle')});
     // $(function () { $('#collapse1').collapse('hide')});
 
