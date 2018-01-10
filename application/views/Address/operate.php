@@ -1,7 +1,7 @@
     <!-- search operate navbar -->
     <nav class="navbar navbar-inverse" id="Manager">
        
-        <button type="button" class="btn btn-primary" aria-label="Left Align" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample" >
+        <button type="button" class="btn btn-primary" aria-label="Left Align" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
         <span class="glyphicon glyphicon-list" aria-hidden="true"></span>
         </button>
 
@@ -22,7 +22,7 @@
  
 
 
-<div class="collapse" id="showOperate">
+<div class="collapse" id="collapseExample">
   <div class="well">
       <form class="form-inline">
     <!-- 下拉选择菜单 -->

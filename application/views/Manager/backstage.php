@@ -92,8 +92,12 @@ body {
         <button type="button" class="close" data-dismiss="alert" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
-         <?php echo "<strong>Warning!</strong> ".validation_errors(); ?>
+         <?php 
+         $alertMessage = NULL;
+         echo "<strong>Warning!</strong> ".validation_errors().$alertMessage; ?>
       </div>
+
+
       <?php echo form_open('Manager','class="form-signin"'); ?>
       <form class="form-signin" method="post" action="http://localhost/rice/index.php/manager">
         <h2 class="form-signin-heading">Magnet</h2>

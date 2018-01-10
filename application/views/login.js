@@ -71,7 +71,7 @@
     $(function () { $('#collapse5').collapse('hide')});
     // $(function () { $('#collapse2').collapse('toggle')});
     // $(function () { $('#collapse1').collapse('hide')});
-
+    $(function () { $('#showOperate').collapse('show')});
     // $(function() {
     //     $('#myModal').modal({
     //         keyboard: true

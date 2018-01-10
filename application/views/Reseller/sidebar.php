@@ -16,7 +16,7 @@
 			<div class="panel-body">
 				<ul class="nav nav-sidebar">
 
-					<li><a href="#">经销商查看</a></li>
+					<li><a href="http://localhost/rice/index.php/manager/reseller_load">经销商查看</a></li>
 					<li><a href="#">经销商添加</a></li>
 					<li><a href="#">经销商删除</a></li>
 
@@ -37,7 +37,7 @@
 			<div class="panel-body">
 				<ul class="nav nav-sidebar">
 
-					<li><a href="#">经销商地址查看</a></li>
+					<li><a href="http://localhost/rice/index.php/manager/address_load">经销商地址查看</a></li>
 					<li><a href="#">经销商地址添加</a></li>
 					<li><a href="#">经销商地址删除</a></li>
 
