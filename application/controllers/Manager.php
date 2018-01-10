@@ -73,6 +73,8 @@ class Manager extends CI_Controller {
 
 					if($password == $value['password']){
 						$data['logname'] = $value['name'];
+						$GLOBALS['logname'] = $data['logname'];
+						echo $GLOBALS['logname'] ;
 
 
 
@@ -88,7 +90,7 @@ class Manager extends CI_Controller {
             // $data 准备向view传入参数
             $data['navbarFirst'] = $navbarFirst;
             ////////////////////////////////////////////// navbar close
-            $this->load->view('Manager/navbar.php',$data);
+            // $this->load->view('Manager/navbar.php',$data);
             ////////////////////////////////////// sidebar 系统管理 动态数据导入
             $sidebar = $this->db->query("SELECT * FROM menu WHERE levels = 2");
 			$data['side0'] = $sidebar->row_array(0);
@@ -211,7 +213,7 @@ class Manager extends CI_Controller {
             // $data 准备向view传入参数
             $data['navbarFirst'] = $navbarFirst;
             ////////////////////////////////////////////// navbar close
-            $this->load->view('Manager/navbar.php',$data);
+            $this->load->view('Reseller/navbar.php',$data);
             ////////////////////////////////////// sidebar 系统管理 动态数据导入
             $sidebar = $this->db->query("SELECT * FROM menu WHERE levels = 2");
 			$data['side0'] = $sidebar->row_array(0);
@@ -290,6 +292,7 @@ class Manager extends CI_Controller {
 
     public function reseller_load(){
 
+
             $this->load->database();
 		    // 装载数据库操作类
 		    // var_dump($this->db);
@@ -308,7 +311,7 @@ class Manager extends CI_Controller {
             $data['navbarFirst'] = $navbarFirst;
             ////////////////////////////////////////////// navbar close
 
-            // $this->load->view('Manager/navbar.php',$data);
+            $this->load->view('Reseller/navbar.php',$data);
 
 
             // 侧面手风琴菜单栏
@@ -389,7 +392,7 @@ class Manager extends CI_Controller {
             $data['navbarFirst'] = $navbarFirst;
             ////////////////////////////////////////////// navbar close
 
-            $this->load->view('Manager/navbar.php',$data);
+            $this->load->view('Reseller/navbar.php',$data);
 
 
             // 侧面手风琴菜单栏
