@@ -95,8 +95,43 @@ class Manager extends CI_Controller {
             $this->load->view('Manager/navbar.php',$data);
             // 侧面手风琴菜单栏
             $this->load->view('Manager/sidebar.php',$data);
-            $this->load->view('Manager/operate.php');
-            $this->load->view('Manager/table_data.php');
+
+            // role 查询操作的下拉选择单
+            $role_tips = $this->db->query('SELECT
+			role.tips
+			FROM
+			role');
+			$data['role_tips'] = $role_tips->result_array();
+			//
+			$dept_fullname = $this->db->query('SELECT
+			dept.fullname
+			FROM
+			dept ');
+			$data['dept_fullname'] = $dept_fullname->result_array();
+
+
+            $this->load->view('Manager/operate.php',$data);
+
+
+
+            $user_list = $this->db->query('SELECT
+			`user`.id,
+			`user`.`name`,
+			`user`.email,
+			dept.fullname,
+			`user`.changed_time,
+			role.tips
+            FROM
+            `user`
+            INNER JOIN role ON role.id = `user`.roleid
+            INNER JOIN dept ON dept.id = `user`.deptid');
+			$data['user_list'] = $user_list->result_array();
+			// var_dump($data['user_list']);
+
+
+
+
+            $this->load->view('Manager/table_data.php',$data);
             $this->load->view('Manager/page.php');
             $this->load->view('foot.php');
 		    // modal
@@ -111,9 +146,9 @@ class Manager extends CI_Controller {
 
 
 		    
-          }
+          }}
+    public function add_user(){
 
-
-	}
+    }
 
 }

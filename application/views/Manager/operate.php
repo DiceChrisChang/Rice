@@ -7,9 +7,12 @@
 
           <!-- 按钮触发模态框 -->
           <!-- Button trigger modal -->
-          <button type="button" class="btn btn-primary " data-toggle="modal" data-target="#Modal">
-          入库操作
+          <!-- <button type="button" class="btn btn-primary " data-toggle="modal" data-target="#Modal">入库操作</button> -->
+
+          <button type="button" class="btn btn-primary ">
+          查询菜单
           </button>
+
 
     </nav>
 
@@ -23,26 +26,34 @@
   <div class="well">
       <form class="form-inline">
     <!-- 下拉选择菜单 -->
-          <div class="col-md-3">
-            <label for="cool">产品号</label>
+          <div class="col-md-2">
+            <label for="cool">角色</label>
+
+
             <select class="form-control" id="cool">
-                <option>201701</option>
-                <option>201702</option>
-                <option>201703</option>
-                <option>201704</option>
-                <option>201705</option> 
+
+            <?php foreach($role_tips as $row):?>
+                <option><?=$row['tips']?></option>
+            <?php endforeach; ?>
+            </select>
+
+          </div>
+          <div class="col-md-2">
+            <label for="cool">部门</label>
+            <select class="form-control" id="cool">
+
+            <?php foreach($dept_fullname as $row):?>
+                <option><?=$row['fullname']?></option>
+            <?php endforeach; ?>
+
             </select>
           </div>
             <!-- 组合筛选 -->
 
           <div class="row">
              <div class="form-group">
-               <label for="exampleInputName2" >Name</label>
+               <label for="exampleInputName2" >姓名</label>
                  <input type="text" class="form-control" id="exampleInputName2" placeholder="Jane Doe">
-             </div>
-             <div class="form-group">
-               <label for="exampleInputEmail2">Email</label>
-                <input type="email" class="form-control" id="exampleInputEmail2" placeholder="jane.doe@example.com">
              </div>
           </div>
 
@@ -50,7 +61,7 @@
 
 
           <div class="row">
-             <button type="submit" class="btn btn-primary">筛选 </button>
+             <button type="submit" class="btn btn-primary">查询 </button>
              <button type="button" class="btn btn-primary" data-target="#">全选</button>
              <button type="button" class="btn btn-primary" data-toggle="#">删除</button>
           </div> 

@@ -152,6 +152,9 @@
             margin-top :3px;  
 
         }
+        .btn{
+            margin-left: 4px;
+        }
 
     </style>
 
