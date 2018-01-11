@@ -17,11 +17,11 @@
   </div>
   <div class="form-group">
     <label for="exampleInputPassword1">邮箱地址</label>
-    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Email" name="email">
+    <input type="email" class="form-control" id="exampleInputPassword1" placeholder="Email" name="email">
   </div>
   <div class="col-md-5">
             <label for="cool">角色选择</label>
-            <select class="form-control" id="cool" name="role_tips">
+            <select class="form-control" id="cool" name="role">
             <?php foreach($role_tips as $row):?>
                 <option><?=$row['tips']?></option>
             <?php endforeach; ?>
@@ -30,16 +30,11 @@
   </div>
   <div class="col-md-7">
             <label for="cool">部门选择</label>
-            <select class="form-control" id="cool" name="dept_fullname">
-
+            <select class="form-control" id="cool" name="dept">
             <?php foreach($dept_fullname as $row):?>
                 <option><?=$row['fullname']?></option>
             <?php endforeach; ?>
-
             </select>
   </div>
   <button type="submit" class="btn btn-default"><a href="#">添加</a></button>
-  
-
-
 </form>

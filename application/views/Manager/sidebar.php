@@ -16,7 +16,7 @@
 			<div class="panel-body">
 				<ul class="nav nav-sidebar">
 					<?php foreach ($mgr as $value):?>
-					<li><a href="#"><?=$value['name']?></a></li>
+					<li><a href="http://localhost/rice/index.php/manager/user_add"><?=$value['name']?></a></li>
 					<?php endforeach;?>
 				</ul>
 			</div>

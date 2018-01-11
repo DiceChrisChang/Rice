@@ -68,12 +68,12 @@
 
 
  -- 向 user 插入数据
- -- INSERT INTO `user` (`name`, `account`, `password`, `email`, `phone`, `roleid`, `deptid`, `status`) VALUES
- -- ('李方彦','admin','admin','lifangyan@qq.com','18011001100',1,1,1 ),
- -- ('赵静仲','adminfake','adminfake','zhaojingzhong@qq.com','18011001101',1,1,2 ),
- -- ('金宇晟','orderadmin','orderadmin','jinyusheng@qq.com','18011001102',2,2,1 ),
- -- ('宁珑','inventoryadmin','inventoryadmin','ninglong@qq.com','18011001103',4,3,1 ),
- -- ('王彭凯','manageradmin','manageradmin','wangpengkai@qq.com','18011001104',6,4,1 );
+ INSERT INTO `user` (`name`, `account`, `password`, `email`, `phone`, `roleid`, `deptid`, `status`) VALUES
+ ('李方彦','admin','admin','lifangyan@qq.com','18011001100',1,1,1 ),
+ ('赵静仲','adminfake','adminfake','zhaojingzhong@qq.com','18011001101',1,1,2 ),
+ ('金宇晟','orderadmin','orderadmin','jinyusheng@qq.com','18011001102',2,2,1 ),
+ ('宁珑','inventoryadmin','inventoryadmin','ninglong@qq.com','18011001103',4,3,1 ),
+ ('王彭凯','manageradmin','manageradmin','wangpengkai@qq.com','18011001104',6,4,1 );
 
 
 

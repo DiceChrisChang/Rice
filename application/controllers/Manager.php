@@ -63,8 +63,6 @@ class Manager extends CI_Controller {
         	$username = $this->input->post('username');
         	$password = $this->input->post('password');
 
-            
-
         	$log = $this->db->query('SELECT
 			`user`.account,
 			`user`.`password`,
@@ -81,8 +79,6 @@ class Manager extends CI_Controller {
 						// 进行登录操作成功后查询数据库寻找对应的用户名并显示
 						$data['logname'] = $value['name'];
 						$GLOBALS['logname'] = $data['logname'];
-
-
 
             // head
 		    $this->load->view('head.php');
@@ -173,8 +169,6 @@ class Manager extends CI_Controller {
 		    return  ;
 		    // $GLOBALS['logname']
 		    // 其他操作还没有改
-
-
 
 					} 
 					else{
@@ -310,11 +304,11 @@ class Manager extends CI_Controller {
             $data['navbarFirst'] = $navbarFirst;
             ////////////////////////////////////////////// navbar close
 
-            $this->load->view('Reseller/navbar.php',$data);
+            // $this->load->view('Reseller/navbar.php',$data);
 
 
             // 侧面手风琴菜单栏
-            $this->load->view('Reseller/sidebar.php',$data);
+            // $this->load->view('Reseller/sidebar.php',$data);
 
 
             /////////////////////////////////////////////////// operate 动态数据
@@ -333,25 +327,39 @@ class Manager extends CI_Controller {
 			dept ');
 			$data['dept_fullname'] = $dept_fullname->result_array();
 			/////////////////////////////////////////////////////// operate close
-            $this->load->view('Manager/operate.php',$data);
+            // $this->load->view('Manager/operate.php',$data);
 
 
             ////////////////////////////////////////////////// table_data 动态数据
-            $reseller_list = $this->db->query('SELECT
-			reseller.id,
-			reseller.`name`,
-			reseller.area,
-			reseller.director,
-			reseller.changed_time,
-			reseller.director_number
-			FROM
-			reseller');
+			$per_page = 6;
+
+			$this->load->library('pagination');
+			$this->load->helper('url');
+
+		    $config['base_url'] = site_url('manager/reseller_load');
+			$config['total_rows'] = 22;
+			$config['per_page'] = $per_page;
+
+			$this->pagination->initialize($config);
+
+			$offset = intval ($this->uri->segment(3));
+
+			$data['pagelink'] = $this->pagination->create_links();
+
+			$sql = 'SELECT * FROM reseller LIMIT '.$offset.', '.$per_page.' ';
+
+            $reseller_list = $this->db->query($sql);
 			$data['reseller_list'] = $reseller_list->result_array();
 			// var_dump($data['reseller_list']);
 			//////////////////////////////////////////////////////// table_data close
-            $this->load->view('Reseller/table_data.php',$data);
 
-            $this->load->view('Reseller/page.php');
+            $this->load->view('Reseller/table_data.php',$data);
+            //////////////////////////////////////////////////////////////  page
+			// 为 data 进行分页
+			// 每页一共六条数据
+
+            //////////////////////////////////////////////////////////////  page
+            $this->load->view('Reseller/page.php',$data);
             $this->load->view('foot.php');
 		    // modal
 		    $this->load->view('modal.php');
@@ -520,24 +528,6 @@ class Manager extends CI_Controller {
 			/////////////////////////////////////////////////////// operate close
             $this->load->view('Add/user_add.php',$data);
 
-
-   //          ////////////////////////////////////////////////// table_data 动态数据
-   //          $address_list = $this->db->query('SELECT
-   //          address.contacter,
-   //          address.contact_number,
-   //          address.address,
-   //          address.changed_time,
-   //          reseller.`name`,
-   //          address.id
-   //          FROM
-   //          reseller
-   //          INNER JOIN address ON address.id = reseller.address_id');
-			// $data['address_list'] = $address_list->result_array();
-			// // var_dump($data['address_list']);
-			// //////////////////////////////////////////////////////// operate close
-   //          $this->load->view('Address/table_data.php',$data);
-
-            $this->load->view('Reseller/page.php');
             $this->load->view('foot.php');
 		    // modal
 		    $this->load->view('modal.php');
@@ -555,9 +545,40 @@ class Manager extends CI_Controller {
 			// echo $this->pagination->create_links();
 
 		    // 获取数据进行插入
-			$username = $this->input->post('username');
-
-
+			$name = $this->input->post('name');
+			$account = $this->input->post('account');
+			$password = $this->input->post('password');
+			$phone = $this->input->post('phone');
+			$email = $this->input->post('email');
+			// 其他表需要查询对应
+			// 需求为 $dept_id $role_id
+			$role_tips = $this->input->post('role_tips');
+			$dept_fullname = $this->input->post('dept_fullname');
+			if($name == null|| $account == null || $password == null|| $phone == null || $email == null || $role_tips == null || $dept_fullname == null){
+				return;
+			}else{
+					$getRole_id = $this->db->query('SELECT
+					role.id
+					FROM role 
+					WHERE
+					role.tips = "$role_tips"');
+					$getDept_id = $this->db->query('SELECT
+					dept.id
+					FROM dept 
+					WHERE
+					dept.fullname = "$dept_fullname"');
+					// test
+					// get $role_id $dept_id
+					$role_id = $getRole_id->row();
+					$dept_id = $getDept_id->row();
+				    // test
+				    // 将数据向数据库插入
+					$add = $this->db->query( 'INSERT INTO `user` (`name`, `account`, `password`, `email`, `phone`, `roleid`, `deptid`,`status`) VALUES($name,$account,$password,$email,$phone,$role_id ,$dept_id,1);');
+					if ($this->db->affected_rows() == 1) {
+						echo "添加成功！";
+					}else{
+						echo "操作失败！";  			
+					}
+			}
     } 
-
 }
