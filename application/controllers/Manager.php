@@ -34,6 +34,7 @@ class Manager extends CI_Controller {
 		*/ 
 		//$content = index.php;
 
+
         $this->load->helper(array('form', 'url'));
         $this->load->library('form_validation');
 
@@ -48,10 +49,12 @@ class Manager extends CI_Controller {
 
         if ($this->form_validation->run() == FALSE)
         {
-            $this->load->view('Manager/backstage.php');
+        	$data['alertMessage'] = null;
+            $this->load->view('Manager/backstage.php',$data);
         }
         else
         {
+
             $this->load->database();
 		    // 装载数据库操作类
 		    // var_dump($this->db);
@@ -59,6 +62,8 @@ class Manager extends CI_Controller {
         	// 表单获取的 账号密码数据
         	$username = $this->input->post('username');
         	$password = $this->input->post('password');
+
+            
 
         	$log = $this->db->query('SELECT
 			`user`.account,
@@ -68,13 +73,14 @@ class Manager extends CI_Controller {
 			`user`
 			');
 			$data['log'] = $log->result_array();
+
 			foreach ($data['log'] as $value) {
 				if ($username == $value['account'] ) {
 
 					if($password == $value['password']){
+						// 进行登录操作成功后查询数据库寻找对应的用户名并显示
 						$data['logname'] = $value['name'];
 						$GLOBALS['logname'] = $data['logname'];
-						echo $GLOBALS['logname'] ;
 
 
 
@@ -122,12 +128,14 @@ class Manager extends CI_Controller {
             /////////////////////////////////////////////////// operate 动态数据
             // role 查询操作的下拉选择单
             $role_tips = $this->db->query('SELECT
+            role.id,
 			role.tips
 			FROM
 			role');
 			$data['role_tips'] = $role_tips->result_array();
 
 			$dept_fullname = $this->db->query('SELECT
+			dept.id,
 			dept.fullname
 			FROM
 			dept ');
@@ -150,7 +158,7 @@ class Manager extends CI_Controller {
             INNER JOIN dept ON dept.id = `user`.deptid');
 			$data['user_list'] = $user_list->result_array();
 			// var_dump($data['user_list']);
-			//////////////////////////////////////////////////////// operate close
+			//////////////////////////////////////////////////////// table_data close
             $this->load->view('Manager/table_data.php',$data);
 
             $this->load->view('Manager/page.php');
@@ -161,7 +169,10 @@ class Manager extends CI_Controller {
 		    $this->load->view('jquery_tail.php');
 		    // js
 		    $this->load->view('login.js');
-		    return;
+		    // 返回超全局变量
+		    return  ;
+		    // $GLOBALS['logname']
+		    // 其他操作还没有改
 
 
 
@@ -181,16 +192,6 @@ class Manager extends CI_Controller {
 				// echo $value['account'];
 			}
 
-
-
-
-
-
-
-
-
-
-  
         }
     }
 
@@ -245,12 +246,14 @@ class Manager extends CI_Controller {
             /////////////////////////////////////////////////// operate 动态数据
             // role 查询操作的下拉选择单
             $role_tips = $this->db->query('SELECT
+            role.id,
 			role.tips
 			FROM
 			role');
 			$data['role_tips'] = $role_tips->result_array();
 
 			$dept_fullname = $this->db->query('SELECT
+			dept.id,
 			dept.fullname
 			FROM
 			dept ');
@@ -273,7 +276,7 @@ class Manager extends CI_Controller {
             INNER JOIN dept ON dept.id = `user`.deptid');
 			$data['user_list'] = $user_list->result_array();
 			// var_dump($data['user_list']);
-			//////////////////////////////////////////////////////// operate close
+			//////////////////////////////////////////////////////// table_data close
             $this->load->view('Manager/table_data.php',$data);
 
             $this->load->view('Manager/page.php');
@@ -317,12 +320,14 @@ class Manager extends CI_Controller {
             /////////////////////////////////////////////////// operate 动态数据
             // role 查询操作的下拉选择单
             $role_tips = $this->db->query('SELECT
+            role.id,
 			role.tips
 			FROM
 			role');
 			$data['role_tips'] = $role_tips->result_array();
 
 			$dept_fullname = $this->db->query('SELECT
+			dept.id,
 			dept.fullname
 			FROM
 			dept ');
@@ -343,7 +348,7 @@ class Manager extends CI_Controller {
 			reseller');
 			$data['reseller_list'] = $reseller_list->result_array();
 			// var_dump($data['reseller_list']);
-			//////////////////////////////////////////////////////// operate close
+			//////////////////////////////////////////////////////// table_data close
             $this->load->view('Reseller/table_data.php',$data);
 
             $this->load->view('Reseller/page.php');
@@ -397,12 +402,14 @@ class Manager extends CI_Controller {
             /////////////////////////////////////////////////// operate 动态数据
             // role 查询操作的下拉选择单
             $role_tips = $this->db->query('SELECT
+            role.id,
 			role.tips
 			FROM
 			role');
 			$data['role_tips'] = $role_tips->result_array();
 
 			$dept_fullname = $this->db->query('SELECT
+			dept.id,
 			dept.fullname
 			FROM
 			dept ');
@@ -424,7 +431,7 @@ class Manager extends CI_Controller {
             INNER JOIN address ON address.id = reseller.address_id');
 			$data['address_list'] = $address_list->result_array();
 			// var_dump($data['address_list']);
-			//////////////////////////////////////////////////////// operate close
+			//////////////////////////////////////////////////////// table_data close
             $this->load->view('Address/table_data.php',$data);
 
             $this->load->view('Reseller/page.php');
@@ -446,6 +453,110 @@ class Manager extends CI_Controller {
 			// $this->pagination->initialize($config);
 			
 			// echo $this->pagination->create_links();
+
+    } 
+    public function user_add(){
+
+            $this->load->database();
+		    // 装载数据库操作类
+		    // var_dump($this->db);
+		    // 装载成功 默认属性名是db
+
+            // head
+		    $this->load->view('head.php');
+			// body
+            ////////////////////////////////////////////// navbar 获取动态数据
+            $query = $this->db->query("SELECT * FROM menu WHERE menu.levels = 1");
+            // var_dump($query);
+            // $query 返回值是对象
+            
+            $navbarFirst =  $query->row()->name;
+            // $data 准备向view传入参数
+            $data['navbarFirst'] = $navbarFirst;
+            ////////////////////////////////////////////// navbar close
+            $this->load->view('Reseller/navbar.php',$data);
+
+            ////////////////////////////////////// sidebar 系统管理 动态数据导入
+            $sidebar = $this->db->query("SELECT * FROM menu WHERE levels = 2");
+			$data['side0'] = $sidebar->row_array(0);
+			$data['side1'] = $sidebar->row_array(1);
+			$data['side2'] = $sidebar->row_array(2);
+			$data['side3'] = $sidebar->row_array(3);
+			$data['side4'] = $sidebar->row_array(4);
+
+			$mgr = $this->db->query("SELECT * FROM menu WHERE levels = 3 and pcodes = '[0],[system],[mgr],'");
+			$data['mgr'] = $mgr->result_array();
+
+			$role = $this->db->query("SELECT * FROM menu WHERE levels = 3 and pcode = 'role'");
+			$data['role'] = $role->result_array();
+
+            $menu = $this->db->query("SELECT * FROM menu WHERE levels = 3 and pcode = 'menu'");
+			$data['menu'] = $menu->result_array();
+
+			$log = $this->db->query("SELECT * FROM menu WHERE levels = 3 and pcode = 'log'");
+			$data['log'] = $log->result_array();
+
+			$dept = $this->db->query("SELECT * FROM menu WHERE levels = 3 and pcode = 'dept'");
+			$data['dept'] = $dept->result_array();
+			//////////////////////////////////////////////////// sidebar close
+
+            // 侧面手风琴菜单栏
+            $this->load->view('Manager/sidebar.php',$data);
+
+
+            /////////////////////////////////////////////////// operate 动态数据
+            // role 查询操作的下拉选择单
+            $role_tips = $this->db->query('SELECT
+            *
+			FROM
+			role');
+			$data['role_tips'] = $role_tips->result_array();
+
+			$dept_fullname = $this->db->query('SELECT
+			*
+			FROM
+			dept ');
+			$data['dept_fullname'] = $dept_fullname->result_array();
+			/////////////////////////////////////////////////////// operate close
+            $this->load->view('Add/user_add.php',$data);
+
+
+   //          ////////////////////////////////////////////////// table_data 动态数据
+   //          $address_list = $this->db->query('SELECT
+   //          address.contacter,
+   //          address.contact_number,
+   //          address.address,
+   //          address.changed_time,
+   //          reseller.`name`,
+   //          address.id
+   //          FROM
+   //          reseller
+   //          INNER JOIN address ON address.id = reseller.address_id');
+			// $data['address_list'] = $address_list->result_array();
+			// // var_dump($data['address_list']);
+			// //////////////////////////////////////////////////////// operate close
+   //          $this->load->view('Address/table_data.php',$data);
+
+            $this->load->view('Reseller/page.php');
+            $this->load->view('foot.php');
+		    // modal
+		    $this->load->view('modal.php');
+		    // tail
+		    $this->load->view('jquery_tail.php');
+		    // js
+		    $this->load->view('login.js');
+
+		    // 分页
+			// $this->load->library('pagination');
+			// $config['base_url'] = 'http://localhost/rice/index.php/manager/reseller_load';
+			// $config['total_rows'] = 22;
+			// $config['per_page'] = 10;
+			// $this->pagination->initialize($config);
+			// echo $this->pagination->create_links();
+
+		    // 获取数据进行插入
+			$username = $this->input->post('username');
+
 
     } 
 

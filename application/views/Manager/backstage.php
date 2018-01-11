@@ -93,8 +93,9 @@ body {
           <span aria-hidden="true">&times;</span>
         </button>
          <?php 
-         $alertMessage = NULL;
-         echo "<strong>Warning!</strong> ".validation_errors().$alertMessage; ?>
+
+         echo "<strong>Warning!</strong> ".validation_errors().$alertMessage; 
+         ?>
       </div>
 
 
