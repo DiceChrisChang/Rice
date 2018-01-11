@@ -90,7 +90,7 @@ class Manager extends CI_Controller {
             // $data 准备向view传入参数
             $data['navbarFirst'] = $navbarFirst;
             ////////////////////////////////////////////// navbar close
-            // $this->load->view('Manager/navbar.php',$data);
+            $this->load->view('Manager/navbar.php',$data);
             ////////////////////////////////////// sidebar 系统管理 动态数据导入
             $sidebar = $this->db->query("SELECT * FROM menu WHERE levels = 2");
 			$data['side0'] = $sidebar->row_array(0);
@@ -286,10 +286,6 @@ class Manager extends CI_Controller {
 		    $this->load->view('login.js');
     }    
 
-
-
-
-
     public function reseller_load(){
 
 
@@ -369,7 +365,6 @@ class Manager extends CI_Controller {
 			// $this->pagination->initialize($config);
 			
 			// echo $this->pagination->create_links();
-
 
     }  
     public function address_load(){
@@ -451,7 +446,6 @@ class Manager extends CI_Controller {
 			// $this->pagination->initialize($config);
 			
 			// echo $this->pagination->create_links();
-
 
     } 
 

@@ -24,8 +24,9 @@
           Mark Otto -> 数据库
         -->
           <p class="navbar-text ">欢迎 <a href="#" class="navbar-link "><?=$logname?></a></p>
-          <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal" id="sign-out">
-            退出
+          <button type="button" class="btn btn-primary"  id="sign-out">
+            <!-- data-toggle="modal" data-target="#myModal" -->
+           <a href="http://localhost/rice/index.php/manager" style="color: white"> 退出</a>
           </button>
       </ul>
    </div><!-- /.navbar-collapse -->
