@@ -304,11 +304,11 @@ class Manager extends CI_Controller {
             $data['navbarFirst'] = $navbarFirst;
             ////////////////////////////////////////////// navbar close
 
-            // $this->load->view('Reseller/navbar.php',$data);
+            $this->load->view('Reseller/navbar.php',$data);
 
 
             // 侧面手风琴菜单栏
-            // $this->load->view('Reseller/sidebar.php',$data);
+            $this->load->view('Reseller/sidebar.php',$data);
 
 
             /////////////////////////////////////////////////// operate 动态数据
@@ -327,7 +327,7 @@ class Manager extends CI_Controller {
 			dept ');
 			$data['dept_fullname'] = $dept_fullname->result_array();
 			/////////////////////////////////////////////////////// operate close
-            // $this->load->view('Manager/operate.php',$data);
+            $this->load->view('Manager/operate.php',$data);
 
 
             ////////////////////////////////////////////////// table_data 动态数据
@@ -427,7 +427,25 @@ class Manager extends CI_Controller {
 
 
             ////////////////////////////////////////////////// table_data 动态数据
-            $address_list = $this->db->query('SELECT
+
+
+
+			$per_page = 6;
+
+			$this->load->library('pagination');
+			$this->load->helper('url');
+
+		    $config['base_url'] = site_url('manager/address_load');
+			$config['total_rows'] = 22;
+			$config['per_page'] = $per_page;
+
+			$this->pagination->initialize($config);
+
+			$offset = intval ($this->uri->segment(3));
+
+			$data['pagelink'] = $this->pagination->create_links();
+
+			$sql = 'SELECT
             address.contacter,
             address.contact_number,
             address.address,
@@ -436,9 +454,13 @@ class Manager extends CI_Controller {
             address.id
             FROM
             reseller
-            INNER JOIN address ON address.id = reseller.address_id');
+            INNER JOIN address ON address.id = reseller.address_id
+            LIMIT '.$offset.', '.$per_page.' ';
+
+            $address_list = $this->db->query($sql);
 			$data['address_list'] = $address_list->result_array();
-			// var_dump($data['address_list']);
+
+
 			//////////////////////////////////////////////////////// table_data close
             $this->load->view('Address/table_data.php',$data);
 
