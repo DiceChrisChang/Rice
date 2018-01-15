@@ -65,7 +65,7 @@ class Manager extends CI_Controller {
         	// var_dump($username,$password);
 
         	$log = $this->db->query('SELECT
-        	`user`.id,	
+        	`user`.id,	 
 			`user`.account,
 			`user`.`password`,
 			`user`.`name`
@@ -82,8 +82,8 @@ class Manager extends CI_Controller {
 					// echo ++$i."++$i</br>";
 					if($password == $value['password']){
 						// 进行登录操作成功后查询数据库寻找对应的用户名并显示
-						// $data['logname'] = $value['name'];
-						// $GLOBALS['logname'] = $data['logname'];
+						$data['logname'] = $value['name'];
+						$GLOBALS['logname'] = $data['logname'];
 						// echo $GLOBALS['logname'] ."GLOBALS[logname]<br>";
 
 
@@ -108,7 +108,7 @@ class Manager extends CI_Controller {
 						$data['side3'] = $sidebar->row_array(3);
 						$data['side4'] = $sidebar->row_array(4);
 			
-						$mgr = $this->db->query("SELECT * FROM menu WHERE levels = 3 and pcodes = '[	0],[		system],[mgr],'");
+						$mgr = $this->db->query("SELECT * FROM menu WHERE levels = 3 and pcodes = '[0],[system],[mgr],'");
 						$data['mgr'] = $mgr->result_array();
 			
 						$role = $this->db->query("SELECT * FROM menu WHERE levels = 3 and pcode = '	role'");
