@@ -131,13 +131,13 @@ body {
     <script type="text/javascript">
 
       // 登录尚未成功时弹出的警告 可以主动操作关闭
-      $('.close').click(function(){
-        $('#alertHide').alert('close');
-      });
+      // $('.close').click(function(){
+      //   $('#alertHide').alert('close');
+      // });
       // 操作输入框可以自动关闭警告框
       $(":input").focus(function(){
         $('#alertHide').hide();        
-      })
+      });
       
     </script>
   </body>
