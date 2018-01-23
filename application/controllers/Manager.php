@@ -87,91 +87,91 @@ class Manager extends CI_Controller {
 						// echo $GLOBALS['logname'] ."GLOBALS[logname]<br>";
 
 
-			            // head
-					    $this->load->view('head.php');
-						// body
-			            ////////////////////////////////////////////// navbar 获取动态数据
-			            $query = $this->db->query("SELECT * FROM menu WHERE menu.levels = 1");
-			            // var_dump($query);
-			            // $query 返回值是对象
-			            
-			            $navbarFirst =  $query->row()->name;
-			            // $data 准备向view传入参数
-			            $data['navbarFirst'] = $navbarFirst;
-			            ////////////////////////////////////////////// navbar close
-			            $this->load->view('Manager/navbar.php',$data);
-			            ////////////////////////////////////// sidebar 系统管理 动态数据导入
-			            $sidebar = $this->db->query("SELECT * FROM menu WHERE levels = 2");
-						$data['side0'] = $sidebar->row_array(0);
-						$data['side1'] = $sidebar->row_array(1);
-						$data['side2'] = $sidebar->row_array(2);
-						$data['side3'] = $sidebar->row_array(3);
-						$data['side4'] = $sidebar->row_array(4);
-			
-						$mgr = $this->db->query("SELECT * FROM menu WHERE levels = 3 and pcodes = '[0],[system],[mgr],'");
-						$data['mgr'] = $mgr->result_array();
-			
-						$role = $this->db->query("SELECT * FROM menu WHERE levels = 3 and pcode = '	role'");
-						$data['role'] = $role->result_array();
-			
-			            $menu = $this->db->query("SELECT * FROM menu WHERE levels = 3 and pcode = '	menu'");
-						$data['menu'] = $menu->result_array();
-			
-						$log = $this->db->query("SELECT * FROM menu WHERE levels = 3 and pcode = 'log'	");
-						$data['log'] = $log->result_array();
-			
-						$dept = $this->db->query("SELECT * FROM menu WHERE levels = 3 and pcode = '	dept'");
-						$data['dept'] = $dept->result_array();
-						//////////////////////////////////////////////////// sidebar close
-			
-			            // 侧面手风琴菜单栏
-			            $this->load->view('Manager/sidebar.php',$data);
-			
-			
-			            /////////////////////////////////////////////////// operate 动态数据
-			            // role 查询操作的下拉选择单
-			            $role_tips = $this->db->query('SELECT
-			            role.id,
-						role.tips
-						FROM
-						role');
-						$data['role_tips'] = $role_tips->result_array();
-			
-						$dept_fullname = $this->db->query('SELECT
-						dept.id,
-						dept.fullname
-						FROM
-						dept ');
-						$data['dept_fullname'] = $dept_fullname->result_array();
-						/////////////////////////////////////////////////////// operate close
-			            $this->load->view('Manager/operate.php',$data);
-			
-			
-			            ////////////////////////////////////////////////// table_data 动态数据
-			            $user_list = $this->db->query('SELECT
-						`user`.id,
-						`user`.`name`,
-						`user`.email,
-						dept.fullname,
-						`user`.changed_time,
-						role.tips
-			            FROM
-			            `user`
-			            INNER JOIN role ON role.id = `user`.roleid
-			            INNER JOIN dept ON dept.id = `user`.deptid');
-						$data['user_list'] = $user_list->result_array();
-						// var_dump($data['user_list']);
-						//////////////////////////////////////////////////////// table_data close
-			            $this->load->view('Manager/table_data.php',$data);
-			
-			            $this->load->view('Manager/page.php');
-			            $this->load->view('foot.php');
-					    // modal
-					    $this->load->view('modal.php');
-					    // tail
-					    $this->load->view('jquery_tail.php');
-					    // js
-					    $this->load->view('login.js');
+            // head
+		    $this->load->view('head.php');
+			// body
+            ////////////////////////////////////////////// navbar 获取动态数据
+            $query = $this->db->query("SELECT * FROM menu WHERE menu.levels = 1");
+            // var_dump($query);
+            // $query 返回值是对象
+            
+            $navbarFirst =  $query->row()->name;
+            // $data 准备向view传入参数
+            $data['navbarFirst'] = $navbarFirst;
+            ////////////////////////////////////////////// navbar close
+            $this->load->view('Reseller/navbar.php',$data);
+            ////////////////////////////////////// sidebar 系统管理 动态数据导入
+            $sidebar = $this->db->query("SELECT * FROM menu WHERE levels = 2");
+			$data['side0'] = $sidebar->row_array(0);
+			$data['side1'] = $sidebar->row_array(1);
+			$data['side2'] = $sidebar->row_array(2);
+			$data['side3'] = $sidebar->row_array(3);
+			$data['side4'] = $sidebar->row_array(4);
+
+			$mgr = $this->db->query("SELECT * FROM menu WHERE levels = 3 and pcodes = '[0],[system],[mgr],'");
+			$data['mgr'] = $mgr->result_array();
+
+			$role = $this->db->query("SELECT * FROM menu WHERE levels = 3 and pcode = 'role'");
+			$data['role'] = $role->result_array();
+
+            $menu = $this->db->query("SELECT * FROM menu WHERE levels = 3 and pcode = 'menu'");
+			$data['menu'] = $menu->result_array();
+
+			$log = $this->db->query("SELECT * FROM menu WHERE levels = 3 and pcode = 'log'");
+			$data['log'] = $log->result_array();
+
+			$dept = $this->db->query("SELECT * FROM menu WHERE levels = 3 and pcode = 'dept'");
+			$data['dept'] = $dept->result_array();
+			//////////////////////////////////////////////////// sidebar close
+
+            // 侧面手风琴菜单栏
+            $this->load->view('Manager/sidebar.php',$data);
+
+
+            /////////////////////////////////////////////////// operate 动态数据
+            // role 查询操作的下拉选择单
+            $role_tips = $this->db->query('SELECT
+            role.id,
+			role.tips
+			FROM
+			role');
+			$data['role_tips'] = $role_tips->result_array();
+
+			$dept_fullname = $this->db->query('SELECT
+			dept.id,
+			dept.fullname
+			FROM
+			dept ');
+			$data['dept_fullname'] = $dept_fullname->result_array();
+			/////////////////////////////////////////////////////// operate close
+            $this->load->view('Manager/operate.php',$data);
+
+
+            ////////////////////////////////////////////////// table_data 动态数据
+            $user_list = $this->db->query('SELECT
+			`user`.id,
+			`user`.`name`,
+			`user`.email,
+			dept.fullname,
+			`user`.changed_time,
+			role.tips
+            FROM
+            `user`
+            INNER JOIN role ON role.id = `user`.roleid
+            INNER JOIN dept ON dept.id = `user`.deptid');
+			$data['user_list'] = $user_list->result_array();
+			// var_dump($data['user_list']);
+			//////////////////////////////////////////////////////// table_data close
+            $this->load->view('Manager/table_data.php',$data);
+
+            $this->load->view('Manager/page.php');
+            $this->load->view('foot.php');
+		    // modal
+		    $this->load->view('modal.php');
+		    // tail
+		    $this->load->view('jquery_tail.php');
+		    // js
+		    $this->load->view('login.js');
 					    // 返回超全局变量
 
 					    // $GLOBALS['logname']
