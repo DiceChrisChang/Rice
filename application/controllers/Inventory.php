@@ -48,7 +48,7 @@ class Inventory extends CI_Controller {
 
 
         	$this->load->database();
-		    // 装载数据库操作类
+		    // 装载数据库操作类    
 		     //var_dump($this->db);
 		    // 装载成功 默认属性名是db
             // $query = $this->db->query("SELECT * FROM product WHERE rice");
