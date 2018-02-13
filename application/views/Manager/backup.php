@@ -94,13 +94,15 @@ body {
         </button>
          <?php 
 
-         echo "<strong>Warning!</strong> ".validation_errors().$alertMessage; 
+         // echo "<strong>Warning!</strong> ".validation_errors().$alertMessage; 
          ?>
       </div>
 
 
-      <?php echo form_open('Manager','class="form-signin"'); ?>
-      <form class="form-signin" method="post" action="http://localhost/rice/index.php/manager">
+       <?php 
+       // echo form_open('Manager','class="form-signin"'); 
+       ?>
+      <form class="form-signin" method="post" action="http://localhost/rice/index.php/testsql">
         <h2 class="form-signin-heading">Magnet</h2>
         <P>客户管理</P>
         <label for="inputEmail" class="sr-only">Email address</label>
@@ -108,9 +110,9 @@ body {
           type = email 存在验证不能作为账号类型
           value 内的 set_value()函数保证其实输入错误也会保留上一次输入的信息
         -->
-        <input type="text" id="inputEmail" class="form-control" placeholder="登录账号" required autofocus name="username" value="<?php echo set_value('username'); ?>" >
+        <input type="text" id="inputEmail" class="form-control" placeholder="登录账号" required autofocus name="username" value="<?php //echo set_value('username'); ?>" >
         <label for="inputPassword" class="sr-only">Password</label>
-        <input type="password" id="inputPassword" class="form-control" placeholder="密码" required name="password" value="<?php echo set_value('password'); ?>" >
+        <input type="password" id="inputPassword" class="form-control" placeholder="密码" required name="password" value="<?php// echo set_value('password'); ?>" >
         <div class="checkbox">
           <label>
             <input type="checkbox" value="remember-me" disabled="disabled" > Remember me

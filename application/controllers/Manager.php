@@ -40,7 +40,7 @@ class Manager extends CI_Controller {
 
 
         // 用户账号输入规则大于等于五小于等于二十
-        $this->form_validation->set_rules('username', 'Username', 'trim|required|min_length[5]|max_length[20]');
+        $this->form_validation->set_rules('username', 'Username', 'trim|required|min_length[5]|max_length[30]');
 
         $this->form_validation->set_rules('password', 'Password', 'required',
             array('required' => 'You must provide a %s.')
@@ -72,9 +72,15 @@ class Manager extends CI_Controller {
 			FROM
 			`user`
 			');
+
+			// 2018年2月12日15:54:20
 			$data['log'] = $log->result_array();
 
-			// $i=0;
+			//////////////////////// ADD 2018年2月12日15:53:12
+            //var_dump($log);
+			//////////////////////// ADD
+
+			//$i=0;
 
 			foreach ($data['log'] as $value) {
 
