@@ -57,8 +57,9 @@ $autoload['packages'] = array();
 | in the controller:
 |
 |	$autoload['libraries'] = array('user_agent' => 'ua');
+| autoloading various resources such as support for database access and session management.
 */
-$autoload['libraries'] = array('database');
+$autoload['libraries'] = array('database','session');
 
 /*
 | -------------------------------------------------------------------
