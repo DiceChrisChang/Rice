@@ -1,3 +1,5 @@
+<?php if (!defined('BASEPATH')) exit('No direct script access allowed');
+// need adjust
 // Common form elements
 $lang['common_form_elements_next'] = "继续...";
 $lang['common_form_elements_save'] = "保存...";
