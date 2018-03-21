@@ -20,6 +20,7 @@ class Basicstart extends CI_Contorller{
   	/*
   	 * load language file
   	 * consider as the notice quotes in chinese
+  	 * there are a lot of files in chinese
   	 */ 
   	$this->lang->load('en_admin','chinese');	
   }
