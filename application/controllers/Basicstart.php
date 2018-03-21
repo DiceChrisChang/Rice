@@ -16,7 +16,7 @@ class Basicstart extends CI_Contorller{
   	$this->load->helper('url');	
   	$this->load->helper('security');	
   	$this->load->helper('language');
-    // 进行测试github
+    // 进行测试
   	/*
   	 * load language file
   	 * consider as the notice quotes in chinese
