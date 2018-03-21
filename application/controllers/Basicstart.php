@@ -20,8 +20,10 @@ class Basicstart extends CI_Contorller{
   	/*
   	 * load language file
   	 * consider as the notice quotes in chinese
-  	 * there are a lot of files in chinese
+  	 * deflault language was replaced in chinese from config/config.php
+  	 * $this->lang->load('ch_admin','chinese');
+  	 * there are a lot of files in chinese that you should load on
   	 */ 
-  	$this->lang->load('en_admin','chinese');	
+  	$this->lang->load(array('en_', 'filename2'));
   }
 }
