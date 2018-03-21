@@ -24,6 +24,7 @@ class Basicstart extends CI_Contorller{
   	 * $this->lang->load('ch_admin','chinese');
   	 * there are a lot of files in chinese that you should load on
   	 */ 
-  	$this->lang->load(array('en_', 'filename2'));
+  	
+  	$this->lang->load(array('ch_admin', 'ch_error'));
   }
 }
