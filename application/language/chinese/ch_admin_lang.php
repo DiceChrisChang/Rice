@@ -4,10 +4,7 @@
 $lang['common_form_elements_next'] = "继续...";
 $lang['common_form_elements_save'] = "保存...";
 $lang['common_form_elements_cancel'] = "取消...";
-<!--
-	$lang['common_form_elements_go'] = "操作执行";
--->
-$lang['common_form_elements_go'] = "Go...";
+$lang['common_form_elements_go'] = "执行操作";
 $lang['common_form_elements_go_back'] = "返回";
 $lang['common_form_elements_submission_error'] = "提交表单形式存在错误:";
 $lang['common_form_elements_success_notifty'] = "成功提示:";

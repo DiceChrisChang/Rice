@@ -1,6 +1,11 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
+/*
+ * edit rice default controller at config/routes.php 
+ * instead of the Welcome page in CI
+ */
+
 class Firstenter extends CI_Controller {
 
 	/**
